@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Welcome </title>
+
+    <?php include("includes/styles.php"); ?>
+    <style type="text/css">
+        .fs-200 {
+            font-size: 20px !important;
+        }
+
+        /* .h1,
+        h1 {
+            font-size: 5.5rem;
+        }
+
+        .carousel-caption {
+            text-align: left;
+        } */
+
+
+
+        /* Custom styling for text on images */
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            /* Left alignment */
+            transform: translateY(-50%);
+            text-align: left;
+            /* Ensure text is left-aligned */
+            font-size: 2rem;
+            /* Bigger text */
+            font-weight: bold;
+            color: #fff !important;
+            /* Force white text */
+            /* background: rgba(0, 0, 0, 0.6); */
+            /* Dark background for readability */
+            padding: 15px 20px;
+            border-radius: 10px;
+            max-width: 50%;
+            /* Limit width */
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+        <!--/////////////////////// header start ////////////////////////-->
+        <?php $page = 'make_active';
+        include("includes/header.php"); ?>
+        <!--/////////////////////// header end ////////////////////////-->
+
+        <!--==================================================================== 
+            Start Hero Section
+        =====================================================================-->
+        <!-- <section class="hero-section overlay">
+            <div class="container">
+                <div class="hero-inner">
+                    <span class="sub-title wow fadeInUp" data-wow-duration="1s">SINCE 1996.</span>
+                    <h1><span class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">Professional </span><br>
+                     <span class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">HR Consulting</span><br>
+                      <span class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">Solutions</span></h1>
+                    <a href="<?php echo base_url(); ?>contact.php" class="theme-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">Contact Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section> -->
+        <!--==================================================================== 
+            End Hero Section
+        =====================================================================-->
+        <!-- <section class="hero-section overlay"> -->
+        <!-- <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000"> 
+                    <img src="<?php echo base_url(); ?>assets/home/images/hero/hero-bg.jpg" class="d-block w-100" alt="...">
+
+                    <div class="carousel-caption text-start custom-caption">
+                        <h1>Professional.</h1>
+                        <h1>HR Consulting.</h1>
+                        <h1>Solutions.</h1>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="<?php echo base_url(); ?>assets/home/images/hero/pvg.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption text-start custom-caption">
+
+                        <h1>Professional</h1>
+                        <h1>HR Consulting</h1>
+                        <h1>Solutions</h1>
+                    </div>
+
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="<?php echo base_url(); ?>assets/home/images/banner/service.jpg" class="d-block w-100" alt="...">
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div> -->
+
+        <!-- </section> -->
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="<?php echo base_url(); ?>assets/home/images/hero/hero-bg.jpg" alt="First slide">
+                    <div class="carousel-caption">
+                        <h1>Professional HR Consulting Solutions</h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="<?php echo base_url(); ?>assets/home/images/hero/pvg.png" alt="Second slide">
+                    <div class="carousel-caption">
+                        <h1>Professional</h1>
+                        <h1>HR Consulting</h1>
+                        <h1>Solutions</h1>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navigation Arrows -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!--==================================================================== 
+            Start Our Success Section
+        =====================================================================-->
+        <div class="our-success pb-30 rpb-0 wow fadeInUp" data-wow-duration="2s">
+            <div class="container">
+                <div class="success-wrap bg-orange">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <div class="success-item">
+                                <div class="success-icon">
+                                    <i class="flaticon-people"></i>
+                                </div>
+                                <div class="success-content">
+                                    <span class="count-text" data-speed="2500" data-stop="100">150</span>
+                                    <p>Happy Clients</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <div class="success-item">
+                                <div class="success-icon">
+                                    <i class="flaticon-edit"></i>
+                                </div>
+                                <div class="success-content">
+                                    <span class="count-text" data-speed="2500" data-stop="5000">0</span>
+                                    <p>Recruitments closures</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <div class="success-item">
+                                <div class="success-icon">
+                                    <i class="flaticon-computer"></i>
+                                </div>
+                                <div class="success-content">
+                                    <span class="count-text" data-speed="2500" data-stop="65">0</span>
+                                    <p>Compliance Cases solved</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <div class="success-item">
+                                <div class="success-icon">
+                                    <i class="flaticon-review"></i>
+                                </div>
+                                <div class="success-content">
+                                    <span class="count-text" data-speed="2500" data-stop="100">0</span>
+                                    <p>Training Programs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--==================================================================== 
+            End Our Success Section
+        =====================================================================-->
+
+        <!--==================================================================== 
+            Start About Us Section
+        =====================================================================-->
+        <section class="about-us pb-150 rpb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-image rmb-50">
+                            <img class="wow fadeInBottomLeft" data-wow-duration="2s" src="<?php echo base_url(); ?>assets/home/images/about/abbout.png" alt="About Image">
+                            <div class="about-border"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-title mb-25 wow fadeInUp" data-wow-duration="2s">
+                                <h2>ONE STOP SOLUTION <br> FOR ALL YOUR <span>HR NEEDS.</span></h2>
+                            </div>
+                            <p class="wow fadeInUp" data-wow-duration="2s">Over the years, we have built our credibility and have emerged as a service partner of choice with many multinationals and Indian organizations alike.
+                            </p>
+
+                            <!-- <i class="wow fadeInUp" data-wow-duration="2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</i> -->
+
+                            <a href="<?php echo base_url(); ?>about.php" class="theme-btn wow fadeInUp" data-wow-duration="2s">Explore More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--==================================================================== 
+            End About Us Section
+        =====================================================================-->
+
+        <!--==================================================================== 
+            Start Service Section
+        =====================================================================-->
+        <section class="services-section bg-snow pt-140 rpt-90 pb-110 rpb-60">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-8">
+                        <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
+                            <h2>Here is what we are offering</h2>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp" data-wow-duration="2s">
+                            <div class="service-icon d-flex">
+                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon1.png" alt="Services">
+                                <a href="service-details.php?id=exe_search" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                            <div class="service-content">
+                                <h4><a href="service-details.php?id=exe_search">Executive <br> Search</a></h4>
+                                <p>We help to acquire strong leadership talent to proper organisation growth. Leadership roles share Management vision,
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+                            <div class="service-icon d-flex">
+                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon2.png" alt="Services">
+                                <a href="service-details.php?id=rec_sol" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                            <div class="service-content">
+                                <h4><a href="service-details.php?id=rec_sol">Recruitment <br> Solutions</a></h4>
+                                <p>The growth and sustenance of any organization depends on the talent it has. Right recruitment process virtually eliminate the risk of hiring the wrong person for the job.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
+                            <div class="service-icon d-flex">
+                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon3.png" alt="Services">
+                                <a href="service-details.php?id=hr_con" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                            <div class="service-content">
+                                <h4><a href="service-details.php?id=hr_con">HR Advisory & <br> Consulting</a></h4>
+                                <p>HR is a specialized function and it is best managed by those who understand the nuances of HR domain. Starting from Start-ups and SMEs, with different vision and mission </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separetor wow fadeInUp" data-wow-duration="2s"></div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp" data-wow-duration="2s">
+                            <div class="service-icon d-flex">
+                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon4.png" alt="Services">
+                                <a href="service-details.php?id=campus" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                            <div class="service-content">
+                                <h4><a href="service-details.php?id=campus">Campus Hiring <br> Solutions</a></h4>
+                                <p>Our Campus Placement & Pre-Placement Training vertical provides unique and unmatched services aiming to benefit Corporate, Institutes/Colleges and Students equally.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+                            <div class="service-icon d-flex">
+                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon5.png" alt="Services">
+                                <a href="service-details.php?id=staff" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                            <div class="service-content">
+                                <h4><a href="service-details.php?id=staff">Contractual Staffing<br>& Payroll</a></h4>
+                                <p>mployers tend to hire contractual staff for temporary needs. Managing Temp Staff involves critical aspects. And we are good in that, ensuring total compliance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
+                            <div class="service-icon d-flex">
+                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon6.png" alt="Services">
+                                <a href="service-details.php?id=train" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                            <div class="service-content">
+                                <h4><a href="service-details.php?id=train">Training & <br> Development</a></h4>
+                                <p>Improved competencies and skill sets are imperative for any business growth and sustenance. To The growth of any organization depends on the talent it has. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--==================================================================== 
+            End Service Section
+        =====================================================================-->
+
+        <!--==================================================================== 
+            Star Partners Section
+        =====================================================================-->
+        <section class="partners-section pt-135 rpt-85 pb-145 rpb-130">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="section-title wow fadeInUp" data-wow-duration="2s">
+                            <h2>Why<br>Value HR First
+                                ?</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-8">
+                        <div class="partner-wrap">
+                            <div class="partner-item">
+                                <img src="<?php echo base_url(); ?>assets/home/images/1.png" alt="Partner Image">
+                                <!-- <p class="p_bold">HR & Compliance Experts</p> -->
+                            </div>
+                            <div class="partner-item">
+                                <img src="<?php echo base_url(); ?>assets/home/images/2.png" alt="Partner Image">
+                                <!-- <p class="p_bold">End-to-End HR Solutions at one place Matter Experts</p> -->
+
+                            </div>
+                            <div class="partner-item">
+                                <img src="<?php echo base_url(); ?>assets/home/images/3.png" alt="Partner Image">
+                                <!-- <p class="p_bold">Experienced Lead & Teams </p> -->
+
+                            </div>
+                            <div class="partner-item">
+                                <img src="<?php echo base_url(); ?>assets/home/images/4.png" alt="Partner Image">
+                                <!-- <p class="p_bold">Budget friendly customized HR Solutions</p> -->
+
+                            </div>
+                            <!-- <div class="partner-item">
+                                <img src="assets/images/partners/partner2.png" alt="Partner Image">
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--==================================================================== 
+            End Partners Section
+        =====================================================================-->
+
+        <!--==================================================================== 
+            Star Cases Section
+        =====================================================================-->
+        <!-- <section class="cases-section bg-black pt-140 rpt-90 pb-150 rpb-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
+                            <h2>Consultancy Cases</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-wrap">
+                    <div class="case-item wow fadeInUp" data-wow-duration="2s">
+                        <div class="case-image">
+                            <img src="assets/images/cases/case1.jpg" alt="Case Image">
+                            <a href="case-details.html"><i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                        <div class="case-content">
+                            <span>HOME / LAND</span>
+                            <h4><a href="case-details.html">Mortgage Advisor</a></h4>
+                        </div>
+                    </div>
+                    <div class="case-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+                        <div class="case-image">
+                            <img src="assets/images/cases/case2.jpg" alt="Case Image">
+                            <a href="case-details.html"><i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                        <div class="case-content">
+                            <span>BUSINESS SOLUTION</span>
+                            <h4><a href="case-details.html">Online Consulting</a></h4>
+                        </div>
+                    </div>
+                    <div class="case-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
+                        <div class="case-image">
+                            <img src="assets/images/cases/case3.jpg" alt="Case Image">
+                            <a href="case-details.html"><i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                        <div class="case-content">
+                            <span>CORPORATE SERVICES</span>
+                            <h4><a href="case-details.html">Planning & Management</a></h4>
+                        </div>
+                    </div>
+                    <div class="case-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.7s">
+                        <div class="case-image">
+                            <img src="assets/images/cases/case2.jpg" alt="Case Image">
+                            <a href="case-details.html"><i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                        <div class="case-content">
+                            <span>BUSINESS SOLUTION</span>
+                            <h4><a href="case-details.html">Online Consulting</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!--==================================================================== 
+            End Cases Section
+        =====================================================================-->
+
+        <!--==================================================================== 
+            Start Team Section
+        =====================================================================-->
+        <section class="team-section pt-135 rpt-90 pb-90 rpb-40">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-md-8">
+                        <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
+                            <h2>Our Team</h2>
+                            <!--     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-wrap">
+                <div class="team-item wow fadeInUp" data-wow-duration="2s">
+                    <div class="item-image">
+                        <img src="<?php echo base_url(); ?>assets/home/images/team/team00.png" alt="Team Image">
+                        <!-- <div class="social-style-two">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-skype"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div> -->
+                    </div>
+                    <div class="team-desc">
+                        <h3>Dr. Prashant Verma Ph.D.</h3>
+                        <p class="fs-200"> Founder & Director</p>
+                    </div>
+                </div>
+
+                <div class="team-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
+                    <div class="item-image">
+                        <img src="<?php echo base_url(); ?>assets/home/images/team/team02.png" alt="Team Image">
+                        <!-- <div class="social-style-two">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-skype"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div> -->
+                    </div>
+                    <div class="team-desc">
+                        <h3>Ms.Kumud, MBA-HR </h3>
+                        <p class="fs-200">Sr. HR Business Partner</p>
+                    </div>
+                </div>
+                <div class="team-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+                    <div class="item-image">
+                        <img src="<?php echo base_url(); ?>assets/home/images/team/team01.png" alt="Team Image">
+                        <!-- <div class="social-style-two">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-skype"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div> -->
+                    </div>
+                    <div class="team-desc">
+                        <h3>B.Shravani, MBA-HR</h3>
+                        <p class="fs-200">HR Business Partner</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--==================================================================== 
+            End Team Section
+        =====================================================================-->
+
+        <!--==================================================================== 
+            Start Call Back Section
+        =====================================================================-->
+        <!-- <section class="call-back-section text-white py-150 rpt-90 rpb-100">
+            <div class="call-back-shap"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-title wow fadeInUp"  data-wow-duration="2s">
+                            <h2>Request A Call Back.</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do labore et dolore magna aliqua enim ad minim veniam.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <form id="call-back-form" class="call-back-form" name="call-back-form" action="#" method="post">
+                            <div class="row clearfix">
+                                <div class="col-md-6">        
+                                    <div class="form-group">
+                                        <input type="text" name="full-name" class="form-control" value="" placeholder="Full Name" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email-address" class="form-control" value="" placeholder="Email Here" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="phone-number" class="form-control" value="" placeholder="Phone No.">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">        
+                                    <div class="form-group">
+                                        <input type="text" name="subject" class="form-control" value="" placeholder="Subject" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-10">        
+                                    <div class="form-group">
+                                        <input type="text" name="short-text" class="form-control" value="" placeholder="Short Text">
+                                    </div>
+                                </div>                                               
+                            </div>
+                            <div class="form-group call-submit text-center">
+                                <button class="theme-btn" type="submit">Submit Now <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!--==================================================================== 
+            End Call Back Section
+        =====================================================================-->
+
+        <!--==================================================================== 
+            Start Testimonial Section
+        =====================================================================-->
+        <section class="testimonial-section pt-135 rpt-85 pb-150 rpb-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-md-8 col-sm-9">
+                        <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
+                            <h2>What Clients Say <span>About Us!</span></h2>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-area">
+                    <div class="review-buttons">
+                        <figure>
+                            <a href="#" data-review="1" class="review-btn">
+                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-small1.jpg" alt="Reviewed by">
+                            </a>
+                        </figure>
+                        <figure class="active-btn">
+                            <a href="#" data-review="2" class="review-btn active">
+                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-small2.jpg" alt="Reviewed by">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="#" data-review="3" class="review-btn">
+                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-small3.jpg" alt="Reviewed by">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="testimony-content">
+                        <div class="review-single">
+                            <div class="textimonial-image">
+                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-big1.jpg" alt="Reviewed By">
+                            </div>
+                            <div class="textimonial-content">
+                                <p>Value HR First Solutions is a valued strategic partner with us. During our interaction with team HR First, they have showcased superior professionalism and conduct of the highest level. Our account manager as well as her team is very quick and extremely responsive. The candidate management and dedication of the team...</p>
+                                <div class="reviewer">
+                                    <h3>Daniel Roberts</h3>
+                                    <span>Mortgage Advisor</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-single active">
+                            <div class="textimonial-image">
+                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-big2.jpg" alt="Reviewed By">
+                            </div>
+                            <div class="textimonial-content">
+                                <p>I was amazed by the promptness of responses. The speed and quality is awesome. The team understand urgency and criticality of mandates and gives their best. Happy to have their services.</p>
+                                <div class="reviewer">
+                                    <h3>Kayleen Colbert</h3>
+                                    <span>Investment Advisor</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-single">
+                            <div class="textimonial-image">
+                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-big3.jpg" alt="Reviewed By">
+                            </div>
+                            <div class="textimonial-content">
+                                <p>HR First Solutions has always demonstrated excellent understanding of our business and urgency. The ease with which they handle both critical and ongoing positions is sometimes really surprising. We are glad to have found a good business partners with them</p>
+                                <div class="reviewer">
+                                    <h3>Charles Fuston</h3>
+                                    <span>Business Consulting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--==================================================================== 
+            End Testimonials Section
+        =====================================================================-->
+
+        <!--==================================================================== 
+            Start Call To Action Section
+        =====================================================================-->
+        <!--  <section class="cta-section bg-orange pt-130 rpt-80 pb-135 rpb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="cta-text wow fadeInUp rmb-25" data-wow-duration="2s">
+                            <h3>You Want To Work With Best Consulting Solutions Company?</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cta-btn wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+                            <a href="contact.php" class="theme-btn">Contact Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!--==================================================================== 
+            End Call To Action Section
+        =====================================================================-->
+
+        <!--/////////////////////// footer start ////////////////////////-->
+
+        <?php include("includes/footer.php"); ?>
+        <!--/////////////////////// footer end ////////////////////////-->
+    </div>
+    <!--End pagewrapper-->
+
+    <?php include("includes/scripts.php"); ?>
+</body>
+
+<!-- Mirrored from live.envalab.com/html/conset/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Apr 2022 07:21:17 GMT -->
+
+</html>
