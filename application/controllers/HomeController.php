@@ -16,7 +16,7 @@ class HomeController extends CI_Controller
 		$this->load->library('form_validation');
 		date_default_timezone_set('Asia/Calcutta');
 		// error_reporting(E_ALL);
-		// ini_set('display_errors', 0);
+		// ini_set('display_errors', 0);2508110877
 	}
 	public function index()
 	{
@@ -26,6 +26,8 @@ class HomeController extends CI_Controller
 		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
 		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
 		$data['tools'] = $this->Home_model->getActiveTools();
+		$data['team'] = $this->Home_model->getActiveTeams();
+		$data['testimonial'] = $this->Home_model->getActiveTestimonial();
 
 		$data['banners'] = $this->Home_model->getActiveBanners();
 		$data['trainings'] = $this->Home_model->getActiveTraining();
@@ -43,6 +45,8 @@ class HomeController extends CI_Controller
 		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
 		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
 	
+		$data['team'] = $this->Home_model->getActiveTeams();
+		$data['testimonial'] = $this->Home_model->getActiveTestimonial();
 
 		$this->load->view('home/about', $data);
 	}

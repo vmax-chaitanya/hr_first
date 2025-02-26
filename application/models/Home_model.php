@@ -75,6 +75,18 @@ class Home_model extends CI_Model
         $this->db->where('type', '3');
         return $this->db->get('gallery')->result_array();
     }
+    public function getActiveTeams()
+    {
+        $this->db->where('status', '1');
+        $this->db->where('type', '4');
+        return $this->db->get('gallery')->result_array();
+    }
+    public function getActiveTestimonial()
+    {
+        $this->db->where('status', '1');
+        // $this->db->where('type', '4');
+        return $this->db->get('testimonials')->result_array();
+    }
     public function getActiveCertificationCoursesTools()
     {
         $this->db->where('status', '1');

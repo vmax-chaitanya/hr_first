@@ -11,15 +11,15 @@
                             <ul>
                                 <li>
                                     <h5>Address:</h5>
-                                    <p>Value HR First Consulting India Pvt. Ltd. </p>
+                                    <p><?php echo $address['company_name']; ?></p>
                                     
-                                    <p># 503, The Concourse, Above SBI, Opp. Lal Bungalow 7-1-58, Ameerpet, Greenlands, Hyderabad-500016.</p>
+                                    <p><?php echo $address['address']; ?></p>
                                     <p>www.hrfirst.in</p>
 
                                 </li>
                                 <li>
                                     <h5>Call Now:</h5>
-                                    <p><a href="callto:+919949996126">+91 9949996126</a></p>
+                                    <p><a href="callto:+91 <?php echo $address['contact_1']; ?>">+91 <?php echo $address['contact_1']; ?></a></p>
                                     <!-- <p><a href="callto:040-2374 6309">040-2374 6309</a></p> -->
                                 </li>
                             </ul>

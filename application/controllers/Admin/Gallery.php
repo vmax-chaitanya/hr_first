@@ -29,7 +29,7 @@ class Gallery extends CI_Controller
     {
         $this->form_validation->set_rules('title', 'Title', 'required|max_length[300]');
         $this->form_validation->set_rules('status', 'Status', 'required|in_list[1,2,3]');
-        $this->form_validation->set_rules('type', 'Type', 'required|in_list[1,2,3]');
+        $this->form_validation->set_rules('type', 'Type', 'required|in_list[1,2,3,4]');
 
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/gallery_create');
@@ -74,7 +74,7 @@ class Gallery extends CI_Controller
     {
         $this->form_validation->set_rules('title', 'Title', 'required|max_length[300]');
         $this->form_validation->set_rules('status', 'Status', 'required|in_list[1,2,3]');
-        $this->form_validation->set_rules('type', 'Type', 'required|in_list[1,2,3]');
+        $this->form_validation->set_rules('type', 'Type', 'required|in_list[1,2,3,4]');
 
         if ($this->form_validation->run() === FALSE) {
             $data['gallery_item'] = $this->gallery_model->get_gallery_item_by_id($id);

@@ -46,7 +46,7 @@
         <!--==================================================================== 
             Start Service Details Section
         =====================================================================-->
-        <section class="service-details pt-140 pb-150 rpt-90 rpb-100">
+        <section class="service-details pt-140 pb-100 rpt-90 rpb-100">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -117,7 +117,7 @@
                                 <h3>Our Mission</h3>
                             </li>
                             <li class="wow fadeInUp" data-tab="tab_3" data-wow-duration="1.5s" data-wow-delay="0.5s">
-                                <h3>Our Beliefs</h3>
+                                <h3>Our Values</h3>
                             </li>
                         </ul>
                     </div>
@@ -127,7 +127,7 @@
                                 <div class="section-title">
                                     <h2>Our Vision</span></h2>
                                 </div>
-                                <p>To be the leading and preferred provider of professional HR solutions to Start Ups, SMEs, Corporates and innovative passage between Talent pool and Industry needs.
+                                <p> <?php echo $social_media['mission']; ?>
                                 </p>
                                 <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco aboris nisi ut aliquip ex ea commodo consequat in voluptate velit.</p> -->
                                 <!--   -->
@@ -136,9 +136,9 @@
                                 <div class="section-title">
                                     <h2>Our Mission</span></h2>
                                 </div>
-                                <p>To provide professional & personalized HR Solutions through innovation, commitment & trust to our Clients in their business growth journey. </p>
+                                <p>  <?php echo $social_media['vision']; ?> </p>
                                 <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
-                                <div class="success-item bg-snow">
+                                <!-- <div class="success-item bg-snow">
                                     <div class="icon-image">
                                         <img src="<?php echo base_url(); ?>assets/home/images/about/icon.png" alt="Success Icon Image">
                                     </div>
@@ -146,15 +146,15 @@
                                         <span class="count-text" data-speed="2500" data-stop="890">0</span>
                                         <h5>Happy Customers.</h5>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div id="tab_3" class="vission-tab-content">
                                 <div class="section-title">
-                                    <h2>Our Beliefs</span></h2>
+                                    <h2>Our Values</span></h2>
                                 </div>
                                 <!-- <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco aboris nisi ut aliquip ex ea commodo consequat in voluptate velit.</p> -->
-                                <p>We believe strong people practices help strong business growth and strong people practices driven by high standards of ethics and values.</p>
-                                <div class="success-item bg-snow">
+                                <p><?php echo $social_media['value']; ?></p>
+                                <!-- <div class="success-item bg-snow">
                                     <div class="icon-image">
                                         <img src="<?php echo base_url(); ?>assets/home/images/services/icon6.png" alt="Success Icon Image">
                                     </div>
@@ -162,7 +162,7 @@
                                         <span class="count-text" data-speed="2500" data-stop="134">0</span>
                                         <h5>Winning Awards.</h5>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -229,15 +229,17 @@
         =====================================================================-->
 
 
-        <!--==================================================================== 
+       <!--==================================================================== 
             Start Team Section
         =====================================================================-->
-        <section class="team-section pt-135 rpt-90 pb-90 rpb-40">
+        <section class="team-section pt-50 rpt-90 pb-50 rpb-40">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-md-8">
                         <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
-                            <h2>Our Team</h2>
+                            
+                            <h2>Our <span>Team</span></h2>
+
                             <!--     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
                         </div>
                     </div>
@@ -245,52 +247,46 @@
             </div>
 
             <div class="team-wrap">
-                <div class="team-item wow fadeInUp" data-wow-duration="2s">
-                    <div class="item-image">
-                        <img src="<?php echo base_url(); ?>assets/home/images/team/team00.png" alt="Team Image">
-                        <!-- <div class="social-style-two">
+
+                <?php $j = 1;
+                foreach ($team as $row) : ?>
+                    <div class="team-item wow fadeInUp" data-wow-duration="<?php echo $j; ?>s">
+                        <div class="item-image">
+                            <img src="<?php echo base_url('' . $row['image']); ?>" alt="Team Image">
+                            <!-- <div class="social-style-two">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-skype"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                          
                         </div> -->
+                        </div>
+                        <div class="team-desc">
+                            <h3> <?php echo $row['title']; ?></h3>
+                            <p class="fs-200"> <?php echo $row['description']; ?></p>
+                        </div>
                     </div>
-                    <div class="team-desc">
-                        <h3>Dr. Prashant Verma Ph.D.</h3>
-                        <p class="fs-200"> Founder & Director</p>
-                    </div>
-                </div>
+                <?php $j++;
+                endforeach; ?>
 
-                <div class="team-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
+
+                <!-- <div class="team-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
                     <div class="item-image">
                         <img src="<?php echo base_url(); ?>assets/home/images/team/team02.png" alt="Team Image">
-                        <!-- <div class="social-style-two">
+                       <div class="social-style-two">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-skype"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        </div> -->
+                        </div> 
                     </div>
                     <div class="team-desc">
                         <h3>Ms.Kumud, MBA-HR </h3>
                         <p class="fs-200">Sr. HR Business Partner</p>
                     </div>
-                </div>
-                <div class="team-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
-                    <div class="item-image">
-                        <img src="<?php echo base_url(); ?>assets/home/images/team/team01.png" alt="Team Image">
-                        <!-- <div class="social-style-two">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-skype"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        </div> -->
-                    </div>
-                    <div class="team-desc">
-                        <h3>B.Shravani, MBA-HR</h3>
-                        <p class="fs-200">HR Business Partner</p>
-                    </div>
-                </div>
+                </div> -->
+
+
             </div>
         </section>
         <!--==================================================================== 
@@ -300,75 +296,72 @@
 
 
 
-        <!--==================================================================== 
+         <!--==================================================================== 
             Start Testimonial Section
         =====================================================================-->
-        <section class="testimonial-section pt-135 rpt-85 pb-150 rpb-100">
+        <section class="testimonial-section pt-50 rpt-85 pb-50 rpb-100">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-xl-6 col-md-8 col-sm-9">
+                    <div class="col-xl-7 col-md-8 col-sm-9">
                         <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
                             <h2>What Clients Say <span>About Us!</span></h2>
                             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-area">
-                    <div class="review-buttons">
-                        <figure>
-                            <a href="#" data-review="1" class="review-btn">
-                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-small1.jpg" alt="Reviewed by">
-                            </a>
-                        </figure>
-                        <figure class="active-btn">
-                            <a href="#" data-review="2" class="review-btn active">
-                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-small2.jpg" alt="Reviewed by">
-                            </a>
-                        </figure>
-                        <figure>
-                            <a href="#" data-review="3" class="review-btn">
-                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-small3.jpg" alt="Reviewed by">
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="testimony-content">
-                        <div class="review-single">
-                            <div class="textimonial-image">
-                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-big1.jpg" alt="Reviewed By">
-                            </div>
-                            <div class="textimonial-content">
-                                <p>HR first Solutions is a valued strategic partner with us. During our interaction with team HR First, they have showcased superior professionalism and conduct of the highest level. Our account manager as well as her team is very quick and extremely responsive. The candidate management and dedication of the team...</p>
-                                <div class="reviewer">
-                                    <h3>Daniel Roberts</h3>
-                                    <span>Mortgage Advisor</span>
+
+                <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                    <ol class="carousel-indicators">
+                        <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+                        <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <?php $i = 1;
+                        foreach ($testimonial as $row) : ?>
+                            <div class="carousel-item <?php echo $i == 1 ? 'active' : ''; ?>">
+                                <div class="testimonial-card">
+                                    <!-- <img src="<?php echo base_url('' . $banner['gender']); ?>" class="profile-img" alt="John Doe"> -->
+
+                                    <?php if ($row['gender'] == 1) { ?>
+                                        <img src="<?php echo base_url(); ?>assets/home/images/testimonials/male.jpg" class="profile-img" >
+                                    <?php } else { ?>
+                                        <img src="<?php echo base_url(); ?>assets/home/images/testimonials/female.jpg" class="profile-img" >
+                                    <?php } ?>
+                                    <h5><?php echo $row['name']; ?></h5>
+                                    <p class="testimonial-text"><?php echo $row['description']; ?></p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="review-single active">
-                            <div class="textimonial-image">
-                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-big2.jpg" alt="Reviewed By">
-                            </div>
-                            <div class="textimonial-content">
-                                <p>I was amazed by the promptness of responses. The speed and quality is awesome. The team understand urgency and criticality of mandates and gives their best. Happy to have their services.</p>
-                                <div class="reviewer">
-                                    <h3>Kayleen Colbert</h3>
-                                    <span>Investment Advisor</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="review-single">
-                            <div class="textimonial-image">
-                                <img src="<?php echo base_url(); ?>assets/home/images/testimonials/testi-big3.jpg" alt="Reviewed By">
-                            </div>
-                            <div class="textimonial-content">
-                                <p>HR First Solutions has always demonstrated excellent understanding of our business and urgency. The ease with which they handle both critical and ongoing positions is sometimes really surprising. We are glad to have found a good business partners with them</p>
-                                <div class="reviewer">
-                                    <h3>Charles Fuston</h3>
-                                    <span>Business Consulting</span>
-                                </div>
-                            </div>
+                        <?php $i++;
+                        endforeach; ?>
+                        <!-- <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <img src="<?php echo base_url(); ?>assets/home/images/team/team02.png" class="profile-img" alt="Jane Smith">
+                            <h5>Jane Smith</h5>
+                            <p class="testimonial-text">"Amazing experience! The team was professional and delivered on time."</p>
                         </div>
                     </div>
+
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <img src="<?php echo base_url(); ?>assets/home/images/team/team02.png" class="profile-img" alt="Michael Johnson">
+                            <h5>Michael Johnson</h5>
+                            <p class="testimonial-text">"Absolutely loved their work! Will definitely use their services again."</p>
+                        </div>
+                    </div> -->
+
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         </section>

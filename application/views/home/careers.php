@@ -203,47 +203,60 @@
                         <div class="section-title">
                             <h2>Apply <span>Here. </span></h2>
                         </div>
-                        <span style="color:green"> <b><?php if (isset($_SESSION['success'])) {
-                                                            echo $_SESSION['success'];
-                                                        }
-                                                        unset($_SESSION['success']); ?></b></span>
-                        <span style="color:red"> <b><?php if (isset($_SESSION['error'])) {
-                                                        echo $_SESSION['error'];
-                                                    }
-                                                    unset($_SESSION['error']); ?></b></span>
+
                         <!-- <p>Drop your message in the below form. We will get back to you earliest possible.</p> -->
-                        <form id="call-back-form" class="call-back-form" name="call-back-form" action="career_action.php" method="post" enctype="multipart/form-data">
+                        <form class="call-back-form" action="#" id="career-form" name="careeerForm" class="career-form" enctype="multipart/form-data">
+
+
                             <div class="row clearfix">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="name" class="form-control" value=""
+                                        <input type="text" name="career_name" class="form-control" value=""
                                             placeholder="Name Here" required="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" name="email" class="form-control" value=""
+                                        <input type="email" name="career_email" class="form-control" value=""
                                             placeholder="Email Here" required="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="phone" class="form-control" value=""
-                                            placeholder="Phone No.">
+                                        <input type="text" name="careeer_mobile" class="form-control" value=""
+                                            placeholder="Phone No." onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input type="file" name="resume" class="form-control" value=""
-                                            placeholder="resume" required="" title="Upload Resume">
+                                            placeholder="resume" required="" title="Upload Resume" accept="application/pdf, application/msword,.doc,.docx, image/*">
                                     </div>
                                 </div>
-                                <div class="col-md-12 mb-40">
+                                <div class="col-md-12 ">
                                     <div class="form-group">
                                         <textarea name="message" rows="7" class="form-control"
                                             placeholder="Text here..."></textarea>
                                     </div>
                                 </div>
+
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-3">
+                                    <p id="image_captcha"><?php echo $captcha_image; ?></p>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="javascript:void(0);" class="captcha-refresh sm"><img class="capture-referwch-image" src="<?php echo base_url() . 'assets/home/images/refresh.png'; ?>" /></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="comment-form__input-box">
+                                        <div class="form-group">
+                                            <input type="text" name="captcha" class="form-control" value=""
+                                                placeholder="Enter Captcha" required="" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="form-group mb-0 text-center">
                                 <button class="theme-btn" type="submit">Submit Now <i

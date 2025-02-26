@@ -7,8 +7,8 @@
                 <div class="container">
                     <div class="top-inner">
                         <ul class="top-left">
-                            <li><i class="fa fa-envelope"></i> <a href="mailto:info@hrfirst.in">info@hrfirst.in</a></li>
-                            <li><i class="fas fa-map-marker-alt"></i>#503 7-1-58, Ameerpet, Greenlands, Hyderabad-500016</li>
+                            <li><i class="fa fa-envelope"></i> <a href="mailto:<?php echo $social_media['gmail']; ?>"><?php echo $social_media['gmail']; ?></a></li>
+                            <li><i class="fas fa-map-marker-alt"></i><?php echo $address['address']; ?></li>
                         </ul>
 
                         <div class="top-right ml-auto">
@@ -47,18 +47,18 @@
 
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li <?php echo (basename($_SERVER['SCRIPT_NAME']) == 'index.php') ? "class='current-menu-item'" : ""; ?> ><a href="<?php echo base_url(); ?>">Home</a></li>
-                                        <li <?php echo (basename($_SERVER['SCRIPT_NAME']) == 'about.php') ? "class='current-menu-item'" : ""; ?> ><a href="<?php echo base_url(); ?>about">About</a></li>
-                                        <li <?php echo (basename($_SERVER['SCRIPT_NAME']) == 'service-details.php') ? "class='current-menu-item'" : ""; ?> ><a href="service-details.php?id=exe_search">Services</a></li>
-                                        <li <?php echo (basename($_SERVER['SCRIPT_NAME']) == 'careers.php') ? "class='current-menu-item'" : ""; ?> ><a href="<?php echo base_url(); ?>careers">Careers</a></li>
-                                        <li <?php echo (basename($_SERVER['SCRIPT_NAME']) == 'blog.php') ? "class='current-menu-item'" : ""; ?> ><a href="<?php echo base_url(); ?>blogs">Blog</a></li>
-                                        <!-- <li class="dropdown"><a href="#">Pages</a>
+                                        <li ><a href="<?php echo base_url(); ?>">Home</a></li>
+                                        <li  ><a href="<?php echo base_url(); ?>about">About</a></li>
+                                        <li  ><a href="service-details.php?id=exe_search">Services</a></li>
+                                        <li  ><a href="<?php echo base_url(); ?>careers">Careers</a></li>
+                                        <li  ><a href="<?php echo base_url(); ?>blogs">Blog</a></li>
+                                        <li class="dropdown"><a href="#">Pages</a>
                                             <ul>
                                                 <li><a href="case-details.php">Case Details</a></li>
                                                 <li><a href="404.php">404</a></li>
                                             </ul>
-                                        </li> -->
-                                        <li <?php echo (basename($_SERVER['SCRIPT_NAME']) == 'contact.php') ? "class='current-menu-item'" : ""; ?> ><a href="<?php echo base_url(); ?>contact">Contact Us</a></li>
+                                        </li>
+                                        <li  ><a href="<?php echo base_url(); ?>contact">Contact Us</a></li>
                                     </ul>
                                 </div>
 
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="menu-number">
-                            <i class="flaticon-headphone"></i> <a href="callto:+91 99499 96126">+91 9949996126</a>
+                            <i class="flaticon-headphone"></i> <a href="callto:+91 <?php echo $address['contact_1']; ?>">+91 <?php echo $address['contact_1']; ?></a>
                         </div>
                     </div>
 

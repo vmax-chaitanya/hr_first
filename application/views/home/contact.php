@@ -93,7 +93,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                         <div class="right-content">
-                                            # 503, The Concourse, Above SBI, Opp. Lal Bungalow 7-1-58, Ameerpet, Greenlands, Hyderabad-500016.
+                                        <?php echo $address['address']; ?>
                                         </div>
                                     </li>
                                     <li>
@@ -101,7 +101,7 @@
                                             <i class="fas fa-phone-alt"></i>
                                         </div>
                                         <div class="right-content">
-                                            <a href="callto:+919949996126">+91 9949996126</a><br>
+                                            <a href="callto:+91<?php echo $address['contact_1']; ?>">+91 <?php echo $address['contact_1']; ?></a><br>
                                             <!-- <a href="callto:+040-2374 6309">040-2374 6309</a> -->
                                         </div>
                                     </li>
@@ -110,7 +110,7 @@
                                             <i class="fa fa-envelope"></i>
                                         </div>
                                         <div class="right-content">
-                                            <a href="mailto:info@hrfirst.in">info@hrfirst.in</a><br>
+                                            <a href="mailto:<?php echo $social_media['gmail']; ?>"><?php echo $social_media['gmail']; ?></a><br>
                                             <!-- <a href="mailto:support@domain.com">support@domain.com</a> -->
                                         </div>
                                     </li>
@@ -123,44 +123,57 @@
                             <h2>Get In <span>Touch. </span></h2>
                         </div>
                         <p>Drop your message in the below form. We will get back to you earliest possible.</p>
-                        <span style="color:green"> <b><?php if (isset($_SESSION['success'])) {
-                                                            echo $_SESSION['success'];
-                                                        }
-                                                        unset($_SESSION['success']); ?></b></span>
-                        <span style="color:red"> <b><?php if (isset($_SESSION['error'])) {
-                                                        echo $_SESSION['error'];
-                                                    }
-                                                    unset($_SESSION['error']); ?></b></span>
-                        <form id="call-back-form" class="call-back-form" name="call-back-form" action="contact_action.php" method="POST">
+
+
+                        <form action="#" id="contact-form"   name="contact" class="call-back-form contact-form"  >
                             <div class="row clearfix">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="name" class="form-control" value="" placeholder="Name Here" required="">
+                                        <input type="text" name="name" class="form-control" value="" placeholder="Name Here" >
+                                      
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" name="email" class="form-control" value="" placeholder="Email Here" required="">
+                                        <input type="email" name="email" class="form-control" value="" placeholder="Email Here" >
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="phone" class="form-control" value="" placeholder="Phone No.">
+                                        <input type="text" name="mobile" class="form-control" value="" placeholder="Phone No." onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="subject" class="form-control" value="" placeholder="Address" required="">
+                                        <input type="text" name="subject" class="form-control" value="" placeholder="subject" >
                                     </div>
                                 </div>
-                                <div class="col-md-12 mb-40">
+                                <div class="col-md-12 ">
                                     <div class="form-group">
                                         <textarea name="message" rows="7" class="form-control" placeholder="Text here..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-3">
+                                    <p id="image_captcha"><?php echo $captcha_image; ?></p>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="javascript:void(0);" class="captcha-refresh sm"><img class="capture-referwch-image" src="<?php echo base_url() . 'assets/home/images/refresh.png'; ?>" /></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="comment-form__input-box">
+                                        <div class="form-group">
+                                            <input type="text" name="captcha" class="form-control" value=""
+                                                placeholder="Enter Captcha"  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group mb-0 text-center">
                                 <button class="theme-btn" type="submit">Submit Now <i class="fas fa-arrow-right"></i></button>
+                                <!-- <button type="submit" class="thm-btn comment-form__btn mt-3"> <span class="button-text">Send a message</span>
+                                <span class="loading-indicator"></span></button> -->
                             </div>
                         </form>
                     </div>
@@ -202,7 +215,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="cta-btn wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
-                            <a href="<?php echo base_url(); ?>contact.php" class="theme-btn">Contact Now <i class="fas fa-arrow-right"></i></a>
+                            <a href="<?php echo base_url(); ?>contact" class="theme-btn">Contact Now <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
