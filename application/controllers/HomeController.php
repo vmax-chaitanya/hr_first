@@ -29,6 +29,8 @@ class HomeController extends CI_Controller
 		$data['team'] = $this->Home_model->getActiveTeams();
 		$data['testimonial'] = $this->Home_model->getActiveTestimonial();
 
+		$data['services'] = $this->Home_model->getCategoryServices(1);
+
 		$data['banners'] = $this->Home_model->getActiveBanners();
 		$data['trainings'] = $this->Home_model->getActiveTraining();
 		$data['captcha_image'] = $this->generate_captcha(0); 
@@ -205,7 +207,7 @@ class HomeController extends CI_Controller
 		// echo $this->db->last_query(); exit;
 		$data['upcoming_services'] = $this->Home_model->getUpcomingServices($service_primary_id, 5, $type);
 // echo $this->db->last_query(); exit;
-$data['captcha_image'] = $this->generate_captcha(0); 
+// $data['captcha_image'] = $this->generate_captcha(0); 
 
 		$this->load->view('home/service_detail', $data);
 	}

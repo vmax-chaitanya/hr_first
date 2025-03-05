@@ -441,7 +441,7 @@
 
     .slick-slide img {
         display: block;
-        filter: grayscale(100%); /* Set initial state to black and white */
+        /* filter: grayscale(100%); Set initial state to black and white */
          transition: filter 0.3s ease; /* Add transition for smooth effect */
     }
 

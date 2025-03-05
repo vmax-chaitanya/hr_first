@@ -236,20 +236,25 @@
                     </div>
                 </div>
                 <div class="row">
+                <?php $i = 1;
+                        foreach ($services as $row) : ?>
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item wow fadeInUp" data-wow-duration="2s">
                             <div class="service-icon d-flex">
                                 <img src="<?php echo base_url(); ?>assets/home/images/services/icon1.png" alt="Services">
-                                <a href="service-details.php?id=exe_search" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
+                                <a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
                             </div>
                             <div class="service-content">
-                                <h4><a href="service-details.php?id=exe_search">Executive <br> Search</a></h4>
-                                <p>We help to acquire strong leadership talent to proper organisation growth. Leadership roles share Management vision,
+                                <h4><a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>"><?php echo $row['name']; ?></a></h4>
+                                <p><?php echo substr($row['description'],0,140); ?>  
                                 </p>
+                                <a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>" class="ml-auto"> Read More...<i class="fas fa-angle-double-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <?php $i++;
+                        endforeach; ?>
+                    <!-- <div class="col-lg-4 col-md-6">
                         <div class="service-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
                             <div class="service-icon d-flex">
                                 <img src="<?php echo base_url(); ?>assets/home/images/services/icon2.png" alt="Services">
@@ -272,9 +277,9 @@
                                 <p>HR is a specialized function and it is best managed by those who understand the nuances of HR domain. Starting from Start-ups and SMEs, with different vision and mission </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="separetor wow fadeInUp" data-wow-duration="2s"></div>
-                    <div class="col-lg-4 col-md-6">
+                    </div> -->
+                    <!-- <div class="separetor wow fadeInUp" data-wow-duration="2s"></div> -->
+                    <!-- <div class="col-lg-4 col-md-6">
                         <div class="service-item wow fadeInUp" data-wow-duration="2s">
                             <div class="service-icon d-flex">
                                 <img src="<?php echo base_url(); ?>assets/home/images/services/icon4.png" alt="Services">
@@ -311,7 +316,7 @@
                                 <p>Improved competencies and skill sets are imperative for any business growth and sustenance. To The growth of any organization depends on the talent it has. </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
