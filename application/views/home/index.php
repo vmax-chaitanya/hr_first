@@ -22,10 +22,6 @@
         .carousel-caption {
             text-align: left;
         } */
-
-
-
-       
     </style>
 
 </head>
@@ -236,25 +232,25 @@
                     </div>
                 </div>
                 <div class="row">
-                <?php $i = 1;
-                        foreach ($services as $row) : ?>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item wow fadeInUp" data-wow-duration="2s">
-                            <div class="service-icon d-flex">
-                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon1.png" alt="Services">
-                                <a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                            <div class="service-content">
-                                <h4><a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>"><?php echo $row['name']; ?></a></h4>
-                                <p><?php echo substr($row['description'],0,140); ?>  
-                                </p>
-                                <a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>" class="ml-auto"> Read More...<i class="fas fa-angle-double-right"></i></a>
+                    <?php $i = 1;
+                    foreach ($services as $row) : ?>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item wow fadeInUp" data-wow-duration="2s">
+                                <div class="service-icon d-flex">
+                                    <img src="<?php echo base_url(); ?>assets/home/images/services/icon1.png" alt="Services">
+                                    <a href="<?php echo base_url(); ?>services/<?php echo $row['service_url']; ?>" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
+                                </div>
+                                <div class="service-content">
+                                    <h4><a href="<?php echo base_url(); ?>services/<?php echo $row['service_url']; ?>"><?php echo $row['name']; ?></a></h4>
+                                    <p><?php echo substr($row['description'], 0, 140); ?>
+                                    </p>
+                                    <a href="<?php echo base_url(); ?>services/<?php echo $row['service_url']; ?>" class="ml-auto"> Read More...<i class="fas fa-angle-double-right"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <?php $i++;
-                        endforeach; ?>
-                   
+                    endforeach; ?>
+
                 </div>
             </div>
         </section>
@@ -271,7 +267,8 @@
                     <div class="col-xl-4">
                         <div class="section-title wow fadeInUp" data-wow-duration="2s">
                             <h2>Why<br>Value HR First
-                                <span>?</span></h2>
+                                <span>?</span>
+                            </h2>
                         </div>
                     </div>
                     <div class="col-xl-8">
@@ -376,7 +373,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-md-8">
                         <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
-                            
+
                             <h2>Our <span>Team</span></h2>
 
                             <!--     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->

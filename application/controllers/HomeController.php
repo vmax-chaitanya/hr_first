@@ -20,11 +20,12 @@ class HomeController extends CI_Controller
 	}
 	public function index()
 	{
-
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('1'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
+		// echo 'PHP Version: ' . phpversion();
+		// exit;
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('1');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
 		$data['tools'] = $this->Home_model->getActiveTools();
 		$data['team'] = $this->Home_model->getActiveTeams();
 		$data['testimonial'] = $this->Home_model->getActiveTestimonial();
@@ -33,7 +34,7 @@ class HomeController extends CI_Controller
 
 		$data['banners'] = $this->Home_model->getActiveBanners();
 		$data['trainings'] = $this->Home_model->getActiveTraining();
-		$data['captcha_image'] = $this->generate_captcha(0); 
+		$data['captcha_image'] = $this->generate_captcha(0);
 
 		//echo $this->db->last_query(); exit;;
 		//print_r($data['banners']); exit;
@@ -42,11 +43,11 @@ class HomeController extends CI_Controller
 
 	public function about()
 	{
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('2'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
-	
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('2');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
+
 		$data['team'] = $this->Home_model->getActiveTeams();
 		$data['faqs'] = $this->Home_model->getActiveFaqs();
 		$data['testimonial'] = $this->Home_model->getActiveTestimonial();
@@ -54,26 +55,26 @@ class HomeController extends CI_Controller
 		$this->load->view('home/about', $data);
 	}
 	public function custom_404()
-    {
-        $this->output->set_status_header('404');
-        $this->load->view('home/404');
-    }
+	{
+		$this->output->set_status_header('404');
+		$this->load->view('home/404');
+	}
 	public function privacy_policy()
 	{
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('11'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
-		
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('11');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
+
 		$this->load->view('home/privacy_policy', $data);
 	}
 	public function disclamer()
 	{
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('10'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
-		
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('10');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
+
 
 		$this->load->view('home/disclamer', $data);
 	}
@@ -82,22 +83,22 @@ class HomeController extends CI_Controller
 
 	public function why_only_we()
 	{
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('5'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
-		
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('5');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
+
 
 		$this->load->view('home/why_only_we', $data);
 	}
 
 	public function why_digital_marketing()
 	{
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('6'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
-		
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('6');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
+
 
 		$this->load->view('home/why_digital_marketing', $data);
 	}
@@ -106,17 +107,17 @@ class HomeController extends CI_Controller
 	public function contact()
 	{
 
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('3'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
-		
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('3');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
+
 		$data['services'] = $this->Home_model->getActiveServices(1);
-	 	$data['captcha_image'] = $this->generate_captcha(0); 
- 		$this->load->view('home/contact', $data);
+		$data['captcha_image'] = $this->generate_captcha(0);
+		$this->load->view('home/contact', $data);
 	}
 
-	
+
 
 
 
@@ -129,10 +130,10 @@ class HomeController extends CI_Controller
 	public function gallery()
 	{
 		// Load the FAQ view
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('12'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('12');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
 
 		$data['GalleryItems'] = $this->Home_model->getActiveGallery();
 		$this->load->view('home/gallery', $data);
@@ -144,7 +145,7 @@ class HomeController extends CI_Controller
 	// 	$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
 	// 	$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
 	// 	$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
-		
+
 
 	// 	$this->load->view('home/faq', $data);
 	// }
@@ -152,23 +153,23 @@ class HomeController extends CI_Controller
 	public function services()
 	{
 		// Load the services view
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('7'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('7');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
 		$data['servicesw'] = $this->Home_model->getActiveServicesNew();
 		// echo "gi"; exit;
 		$this->load->view('home/services', $data);
 	}
 	public function category_services($url)
 	{
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('13'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('13');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
 
-        $categories = $this->Home_model->getServiceCategoryByUrl($url); 
-		
+		$categories = $this->Home_model->getServiceCategoryByUrl($url);
+
 		$data['servicesw'] = $this->Home_model->getCategoryServices($categories['id']);
 		//echo "<pre>"; print_r($data['services']); exit;
 		$this->load->view('home/services', $data);
@@ -177,20 +178,20 @@ class HomeController extends CI_Controller
 	public function other_services()
 	{
 		// Load the services view
-		
+
 		$data['services'] = $this->Home_model->getActiveOtherServices();
 		$this->load->view('home/services', $data);
 	}
 	public function service_detail($service_id)
 	{
 		//echo $service_id; exit;
-		
+
 		$data['services_detail'] = $this->Home_model->get_service_by_id($service_id);
 
 		// $data['meta_data'] =  $this->Home_model->getSeoRecordById('home'); 
-		$data['page_title'] = !empty($data['services_detail']['meta_name']) ? $data['services_detail']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['services_detail']['meta_description']) ? $data['services_detail']['meta_description'] :"page_title";
-		$data['meta_keywords'] = !empty($data['services_detail']['meta_keywords']) ? $data['services_detail']['meta_keywords'] :"page_title";
+		$data['page_title'] = !empty($data['services_detail']['meta_name']) ? $data['services_detail']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['services_detail']['meta_description']) ? $data['services_detail']['meta_description'] : "page_title";
+		$data['meta_keywords'] = !empty($data['services_detail']['meta_keywords']) ? $data['services_detail']['meta_keywords'] : "page_title";
 
 		$data['services'] = $this->Home_model->getCategoryServices(1);
 
@@ -208,8 +209,8 @@ class HomeController extends CI_Controller
 		$data['services_menu'] = $this->Home_model->getActiveServicesSideMenu($type);
 		// echo $this->db->last_query(); exit;
 		$data['upcoming_services'] = $this->Home_model->getUpcomingServices($service_primary_id, 5, $type);
-// echo $this->db->last_query(); exit;
-// $data['captcha_image'] = $this->generate_captcha(0); 
+		// echo $this->db->last_query(); exit;
+		// $data['captcha_image'] = $this->generate_captcha(0); 
 
 		$this->load->view('home/service_detail', $data);
 	}
@@ -218,10 +219,10 @@ class HomeController extends CI_Controller
 	public function training()
 	{
 
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('8'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('8');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
 		$data['certification_course'] = $this->Home_model->getActiveCertification();
 		$data['trainings'] = $this->Home_model->getActiveTraining();
 		$data['tools'] = $this->Home_model->getActiveTools();
@@ -233,14 +234,14 @@ class HomeController extends CI_Controller
 	public function training_detail($training_id)
 	{
 
-		
-		
+
+
 		$data['training_detail'] = $this->Home_model->get_training_by_id($training_id);
 
 		// $data['meta_data'] =  $this->Home_model->getSeoRecordById('home'); 
-		$data['page_title'] = !empty($data['training_detail']['meta_name']) ? $data['training_detail']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['training_detail']['meta_description']) ? $data['training_detail']['meta_description'] :"page_title";
-		$data['meta_keywords'] = !empty($data['training_detail']['meta_keywords']) ? $data['training_detail']['meta_keywords'] :"page_title";
+		$data['page_title'] = !empty($data['training_detail']['meta_name']) ? $data['training_detail']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['training_detail']['meta_description']) ? $data['training_detail']['meta_description'] : "page_title";
+		$data['meta_keywords'] = !empty($data['training_detail']['meta_keywords']) ? $data['training_detail']['meta_keywords'] : "page_title";
 
 		// echo "hi"; exit;
 		//	 echo "<pre>"; print_r($data['training_detail']); exit;
@@ -249,17 +250,17 @@ class HomeController extends CI_Controller
 		$data['key_highlites'] = $this->Home_model->getActiveKeyHighlites($service_primary_id);
 		$data['trainings'] = $this->Home_model->getActiveTraining();
 		$data['upcoming_trainings'] = $this->Home_model->getUpcomingTraining($service_primary_id, 5);
-		$data['captcha_image'] = $this->generate_captcha(0); 
+		$data['captcha_image'] = $this->generate_captcha(0);
 
 		$this->load->view('home/training_detail', $data);
 	}
 	public function blogs()
 	{
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('9'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
-	
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('9');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
+
 		$data['blogs'] = $this->Home_model->get_all_blogs();
 		//  print_r($data['blogs']); exit;
 		$this->load->view('home/blog', $data);
@@ -268,23 +269,23 @@ class HomeController extends CI_Controller
 	{
 		$data['blogs'] = $this->Home_model->get_all_blogs();
 
-		
+
 		$data['blog'] = $this->Home_model->get_blog_by_id($blog_id);
 
 		// $data['meta_data'] =  $this->Home_model->getSeoRecordById('home'); 
-		$data['page_title'] = !empty($data['blog']['meta_name']) ? $data['blog']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['blog']['meta_description']) ? $data['blog']['meta_description'] :"page_title";
-		$data['meta_keywords'] = !empty($data['blog']['meta_keywords']) ? $data['blog']['meta_keywords'] :"page_title";
+		$data['page_title'] = !empty($data['blog']['meta_name']) ? $data['blog']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['blog']['meta_description']) ? $data['blog']['meta_description'] : "page_title";
+		$data['meta_keywords'] = !empty($data['blog']['meta_keywords']) ? $data['blog']['meta_keywords'] : "page_title";
 
 		// echo $this->db->last_query(); exit;
-		$data['captcha_image'] = $this->generate_captcha(0); 
+		$data['captcha_image'] = $this->generate_captcha(0);
 
 		$this->load->view('home/blog_detail', $data);
 	}
 	public function popup_enquiry()
 	{
-	// echo	$this->session->userdata('captcha_code');
-	// 	print_r($this->input->post()); exit;
+		// echo	$this->session->userdata('captcha_code');
+		// 	print_r($this->input->post()); exit;
 		if ($this->input->post('captcha1') != $this->session->userdata('captcha_code')) {
 			$response = array(
 				'status' => 'error',
@@ -311,8 +312,8 @@ class HomeController extends CI_Controller
 		if ($result) {
 
 			$services_names = "-";
-			$subject ="Quick form details";
-			$this->send_email_contact_form($data_contact,$services_names,$subject);
+			$subject = "Quick form details";
+			$this->send_email_contact_form($data_contact, $services_names, $subject);
 
 			$pdfFilePath =  base_url('' . 'assets/home/Brochure.pdf');
 
@@ -359,9 +360,9 @@ class HomeController extends CI_Controller
 		if ($result) {
 			$data['training_detail'] = $this->Home_model->get_training_by_id($this->input->post('training_url'));
 			$services_names = $data['training_detail']['name'];
-			$subject ="Training form details";
-			$this->send_email_contact_form($data_contact,$services_names,$subject);
-		 	$pdfFilePath =  base_url('' . $data['training_detail']['brochure']); 
+			$subject = "Training form details";
+			$this->send_email_contact_form($data_contact, $services_names, $subject);
+			$pdfFilePath =  base_url('' . $data['training_detail']['brochure']);
 			// echo $pdfFilePath;
 			$response = array(
 				'status' => 'success',
@@ -406,7 +407,7 @@ class HomeController extends CI_Controller
 		);
 
 		$result = $this->contact_model->create_contact($data);
-		
+
 		$contact_id = $this->db->insert_id();
 		$data_contact = $this->contact_model->get_contact_by_id($contact_id);
 		$services_ids = explode(',', $data_contact['services_ids']);
@@ -417,15 +418,15 @@ class HomeController extends CI_Controller
 				$service_name_array[] = $service_data['name'];
 			}
 		}
-		 $services_names = implode(', ', $service_name_array);
-		
+		$services_names = implode(', ', $service_name_array);
+
 		if ($result) {
-			$subject ="Contact form details";
-			$this->send_email_contact_form($data_contact,$services_names,$subject);
+			$subject = "Contact form details";
+			$this->send_email_contact_form($data_contact, $services_names, $subject);
 			// echo "Thank you for your message. We will get in touch with you shortly";
 			// exit;
-			  // Send success response
-			  $response = array(
+			// Send success response
+			$response = array(
 				'status' => 'success',
 				'message' => 'Thank you for your message. We will get in touch with you shortly'
 			);
@@ -446,11 +447,11 @@ class HomeController extends CI_Controller
 	public function seo()
 	{
 		// Load the about view
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('seo'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
-	
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('seo');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
+
 
 		$this->load->view('home/seo', $data);
 	}
@@ -458,14 +459,14 @@ class HomeController extends CI_Controller
 	{
 		//echo "hi"; exit;
 		// Load the about view
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('4'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
-		
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('4');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
+
 		$data['careers_list'] = $this->Home_model->getActiveCareers();
 		$data['careers_list_form'] = $this->Home_model->getActiveCareers();
-		$data['captcha_image'] = $this->generate_captcha(0); 
+		$data['captcha_image'] = $this->generate_captcha(0);
 
 		// echo $this->db->last_query(); exit;
 		$this->load->view('home/careers', $data);
@@ -507,227 +508,227 @@ class HomeController extends CI_Controller
 	// 	// Load the appropriate view to display a response to the user
 	// 	$this->load->view('email_view');
 	// }
-// 	public function sendEmail()
-// 	{
-// 		//echo "fg"; exit;
-// 		$this->load->library('Phpmailer');
+	// 	public function sendEmail()
+	// 	{
+	// 		//echo "fg"; exit;
+	// 		$this->load->library('Phpmailer');
 
-// 		$smtp_host = "mail.rdsindia.com";
-// 		$smtp_user = "info@digitalwinbusinessagency.com";
-// 		$smtp_password = "digitalwin@123";
-// 		$smtp_port = 25;
+	// 		$smtp_host = "mail.rdsindia.com";
+	// 		$smtp_user = "info@digitalwinbusinessagency.com";
+	// 		$smtp_password = "digitalwin@123";
+	// 		$smtp_port = 25;
 
-// 		$mail_from = "info@digitalwinbusinessagency.com";
-// 		$mail_from_name = "Value HR first";
+	// 		$mail_from = "info@digitalwinbusinessagency.com";
+	// 		$mail_from_name = "Value HR first";
 
-// 		$mail_to = "chaitanyakadali3@gmail.com";
-// 		$mail_to_name = "RDS Support";
-// $body = "
-//     <table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse; width: 100%;'>
-//         <thead>
-//             <tr style='background-color: #f2f2f2;'>
-//                 <th style='padding: 10px;'>Field</th>
-//                 <th style='padding: 10px;'>Value</th>
-//             </tr>
-//         </thead>
-//         <tbody>
-//             <tr>
-//                 <td style='padding: 10px;'>Name</td>
-//                 <td style='padding: 10px;'>chaitanya</td>
-//             </tr>
-//             <tr>
-//                 <td style='padding: 10px;'>Email</td>
-//                 <td style='padding: 10px;'>fddddddd@gmail.com</td>
-//             </tr>
-//             <tr>
-//                 <td style='padding: 10px;'>Mobile</td>
-//                 <td style='padding: 10px;'>7799348370</td>
-//             </tr>
-//             <tr>
-//                 <td style='padding: 10px;'>Subject</td>
-//                 <td style='padding: 10px;'>sdfs fg dfgdfg</td>
-//             </tr>
-//             <tr>
-//                 <td style='padding: 10px;'>Coupon ID</td>
-//                 <td style='padding: 10px;'>dfgdf gdfghd</td>
-//             </tr>
-//             <tr>
-//                 <td style='padding: 10px;'>Message</td>
-//                 <td style='padding: 10px;'>dfgd fgd fgd</td>
-//             </tr>
-//             <tr>
-//                 <td style='padding: 10px;'>Services IDs</td>
-//                 <td style='padding: 10px;'>1</td>
-//             </tr>
-//             <tr>
-//                 <td style='padding: 10px;'>Status</td>
-//                 <td style='padding: 10px;'>dfse fdf sdfs</td>
-//             </tr>
-//             <tr>
-//                 <td style='padding: 10px;'>Created At</td>
-//                 <td style='padding: 10px;'>12:</td>
-//             </tr>
-//         </tbody>
-//     </table>
-// ";
+	// 		$mail_to = "chaitanyakadali3@gmail.com";
+	// 		$mail_to_name = "RDS Support";
+	// $body = "
+	//     <table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse; width: 100%;'>
+	//         <thead>
+	//             <tr style='background-color: #f2f2f2;'>
+	//                 <th style='padding: 10px;'>Field</th>
+	//                 <th style='padding: 10px;'>Value</th>
+	//             </tr>
+	//         </thead>
+	//         <tbody>
+	//             <tr>
+	//                 <td style='padding: 10px;'>Name</td>
+	//                 <td style='padding: 10px;'>chaitanya</td>
+	//             </tr>
+	//             <tr>
+	//                 <td style='padding: 10px;'>Email</td>
+	//                 <td style='padding: 10px;'>fddddddd@gmail.com</td>
+	//             </tr>
+	//             <tr>
+	//                 <td style='padding: 10px;'>Mobile</td>
+	//                 <td style='padding: 10px;'>7799348370</td>
+	//             </tr>
+	//             <tr>
+	//                 <td style='padding: 10px;'>Subject</td>
+	//                 <td style='padding: 10px;'>sdfs fg dfgdfg</td>
+	//             </tr>
+	//             <tr>
+	//                 <td style='padding: 10px;'>Coupon ID</td>
+	//                 <td style='padding: 10px;'>dfgdf gdfghd</td>
+	//             </tr>
+	//             <tr>
+	//                 <td style='padding: 10px;'>Message</td>
+	//                 <td style='padding: 10px;'>dfgd fgd fgd</td>
+	//             </tr>
+	//             <tr>
+	//                 <td style='padding: 10px;'>Services IDs</td>
+	//                 <td style='padding: 10px;'>1</td>
+	//             </tr>
+	//             <tr>
+	//                 <td style='padding: 10px;'>Status</td>
+	//                 <td style='padding: 10px;'>dfse fdf sdfs</td>
+	//             </tr>
+	//             <tr>
+	//                 <td style='padding: 10px;'>Created At</td>
+	//                 <td style='padding: 10px;'>12:</td>
+	//             </tr>
+	//         </tbody>
+	//     </table>
+	// ";
 
-// 		//$body = 'Test';
+	// 		//$body = 'Test';
 
-// 		$this->phpmailer->IsSMTP();
-// 		$this->phpmailer->Host = $smtp_host;
-// 		$this->phpmailer->SMTPDebug = 1;
-// 		$this->phpmailer->SMTPAuth = true;
-// 		$this->phpmailer->Port = $smtp_port;
-// 		$this->phpmailer->Username = $smtp_user;
-// 		$this->phpmailer->Password = $smtp_password;
+	// 		$this->phpmailer->IsSMTP();
+	// 		$this->phpmailer->Host = $smtp_host;
+	// 		$this->phpmailer->SMTPDebug = 1;
+	// 		$this->phpmailer->SMTPAuth = true;
+	// 		$this->phpmailer->Port = $smtp_port;
+	// 		$this->phpmailer->Username = $smtp_user;
+	// 		$this->phpmailer->Password = $smtp_password;
 
-// 		$this->phpmailer->SetFrom($mail_from, $mail_from_name);
-// 		$this->phpmailer->AddReplyTo($mail_from, $mail_from_name);
+	// 		$this->phpmailer->SetFrom($mail_from, $mail_from_name);
+	// 		$this->phpmailer->AddReplyTo($mail_from, $mail_from_name);
 
-// 		$this->phpmailer->Subject = "PHPMailer Test Subject via smtp, basic with authentication";
-// 		$this->phpmailer->MsgHTML($body);
+	// 		$this->phpmailer->Subject = "PHPMailer Test Subject via smtp, basic with authentication";
+	// 		$this->phpmailer->MsgHTML($body);
 
-// 		$address = $mail_to;
-// 		$this->phpmailer->AddAddress($address, $mail_to_name);
+	// 		$address = $mail_to;
+	// 		$this->phpmailer->AddAddress($address, $mail_to_name);
 
-// 		if (!$this->phpmailer->Send()) {
-// 			echo "Mailer Error: " . $this->phpmailer->ErrorInfo;
-// 		} else {
-// 			echo "Message sent!";
-// 		}
-// 	}
-	public function send_email_contact_form($message,$services_names,$subject)
+	// 		if (!$this->phpmailer->Send()) {
+	// 			echo "Mailer Error: " . $this->phpmailer->ErrorInfo;
+	// 		} else {
+	// 			echo "Message sent!";
+	// 		}
+	// 	}
+	public function send_email_contact_form($message, $services_names, $subject)
 	{
 		if (!empty($message['name'])) {
-		//echo "fg"; exit;
-		//	print_r($message); exit();
-		$this->load->library('Phpmailer');
-		$message_body = "
+			//echo "fg"; exit;
+			//	print_r($message); exit();
+			$this->load->library('Phpmailer');
+			$message_body = "
 		<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse; width: 100%;'>
 			<tr>
 				<th>Field</th>
 				<th>Value</th>
 			</tr>";
-	
-	// Add row for Name if it's not empty
-	if (!empty($message['name'])) {
-		$message_body .= "
+
+			// Add row for Name if it's not empty
+			if (!empty($message['name'])) {
+				$message_body .= "
 			<tr>
 				<td>Name</td>
 				<td>{$message['name']}</td>
 			</tr>";
-	}
-	
-	// Add row for Email if it's not empty
-	if (!empty($message['email'])) {
-		$message_body .= "
+			}
+
+			// Add row for Email if it's not empty
+			if (!empty($message['email'])) {
+				$message_body .= "
 			<tr>
 				<td>Email</td>
 				<td>{$message['email']}</td>
 			</tr>";
-	}
-	
-	// Add row for Mobile if it's not empty
-	if (!empty($message['mobile'])) {
-		$message_body .= "
+			}
+
+			// Add row for Mobile if it's not empty
+			if (!empty($message['mobile'])) {
+				$message_body .= "
 			<tr>
 				<td>Mobile</td>
 				<td>{$message['mobile']}</td>
 			</tr>";
-	}
-	
-	// Add row for Subject if it's not empty
-	if (!empty($message['subject'])) {
-		$message_body .= "
+			}
+
+			// Add row for Subject if it's not empty
+			if (!empty($message['subject'])) {
+				$message_body .= "
 			<tr>
 				<td>Subject</td>
 				<td>{$message['subject']}</td>
 			</tr>";
-	}
-	
-	// Add row for Coupon ID if it's not empty
-	if (!empty($message['coupon_id'])) {
-		$message_body .= "
+			}
+
+			// Add row for Coupon ID if it's not empty
+			if (!empty($message['coupon_id'])) {
+				$message_body .= "
 			<tr>
 				<td>Coupon ID</td>
 				<td>{$message['coupon_id']}</td>
 			</tr>";
-	}
-	
-	// Add row for Message if it's not empty
-	if (!empty($message['message'])) {
-		$message_body .= "
+			}
+
+			// Add row for Message if it's not empty
+			if (!empty($message['message'])) {
+				$message_body .= "
 			<tr>
 				<td>Message</td>
 				<td>{$message['message']}</td>
 			</tr>";
-	}
-	
-	// Add row for Services if it's not empty
-	if (!empty($services_names)) {
-		$message_body .= "
+			}
+
+			// Add row for Services if it's not empty
+			if (!empty($services_names)) {
+				$message_body .= "
 			<tr>
 				<td>Services</td>
 				<td>{$services_names}</td>
 			</tr>";
-	}
-	
-	// Add row for Received At if it's not empty
-	if (!empty($message['created_at'])) {
-		$message_body .= "
+			}
+
+			// Add row for Received At if it's not empty
+			if (!empty($message['created_at'])) {
+				$message_body .= "
 			<tr>
 				<td>Received At</td>
 				<td>{$message['created_at']}</td>
 			</tr>";
-	}
-	
-	$message_body .= "</table>";
+			}
 
-         // Define the path to the PDF file
-        // $pdfFilePath = FCPATH . 'assets/home/Brochure.pdf';
-    
-        // Check if the file exists
-        // if (file_exists($pdfFilePath)) {
-        //     $this->phpmailer->AddAttachment($pdfFilePath);
-        // } 
-	
-		$smtp_host = "localhost";
-		$smtp_user = "info@digitalwinbusinessagency.com";
-		$smtp_password = "digitalwinba@12345";
-		$smtp_port = 25;
+			$message_body .= "</table>";
 
-		$mail_from = "info@digitalwinbusinessagency.com";
-		$mail_from_name = "Value HR first";
+			// Define the path to the PDF file
+			// $pdfFilePath = FCPATH . 'assets/home/Brochure.pdf';
 
-		$mail_to = "chaitanyakadali3@gmail.com";
-		$mail_to_name = "Chaitanya";
+			// Check if the file exists
+			// if (file_exists($pdfFilePath)) {
+			//     $this->phpmailer->AddAttachment($pdfFilePath);
+			// } 
 
-		$body = $message_body;
+			$smtp_host = "localhost";
+			$smtp_user = "info@digitalwinbusinessagency.com";
+			$smtp_password = "digitalwinba@12345";
+			$smtp_port = 25;
 
-		$this->phpmailer->IsSMTP();
-		$this->phpmailer->Host = $smtp_host;
-		$this->phpmailer->SMTPDebug = 0;
-		$this->phpmailer->SMTPAuth = true;
-		$this->phpmailer->Port = $smtp_port;
-		$this->phpmailer->Username = $smtp_user;
-		$this->phpmailer->Password = $smtp_password;
-		$this->phpmailer->SetFrom($mail_from, $mail_from_name);
-		$this->phpmailer->AddReplyTo($mail_from, $mail_from_name);
-		$this->phpmailer->Subject = $subject;
-		$this->phpmailer->MsgHTML($body);
-		//$address = $mail_to;
-// 		$this->phpmailer->AddAttachment($pdfFilePath);
-		$this->phpmailer->AddAddress($mail_to, $mail_to_name);
-		$this->phpmailer->AddAddress('suresh6k@gmail.com', "Suresh");
-		
-// 		echo $this->phpmailer->ErrorInfo; exit;
-		if (!$this->phpmailer->Send()) {
-			// echo "Mailer Error: " . $this->phpmailer->ErrorInfo;
-		} else {
-			//echo "Message sent!";
+			$mail_from = "info@digitalwinbusinessagency.com";
+			$mail_from_name = "Value HR first";
+
+			$mail_to = "chaitanyakadali3@gmail.com";
+			$mail_to_name = "Chaitanya";
+
+			$body = $message_body;
+
+			$this->phpmailer->IsSMTP();
+			$this->phpmailer->Host = $smtp_host;
+			$this->phpmailer->SMTPDebug = 0;
+			$this->phpmailer->SMTPAuth = true;
+			$this->phpmailer->Port = $smtp_port;
+			$this->phpmailer->Username = $smtp_user;
+			$this->phpmailer->Password = $smtp_password;
+			$this->phpmailer->SetFrom($mail_from, $mail_from_name);
+			$this->phpmailer->AddReplyTo($mail_from, $mail_from_name);
+			$this->phpmailer->Subject = $subject;
+			$this->phpmailer->MsgHTML($body);
+			//$address = $mail_to;
+			// 		$this->phpmailer->AddAttachment($pdfFilePath);
+			$this->phpmailer->AddAddress($mail_to, $mail_to_name);
+			$this->phpmailer->AddAddress('suresh6k@gmail.com', "Suresh");
+
+			// 		echo $this->phpmailer->ErrorInfo; exit;
+			if (!$this->phpmailer->Send()) {
+				// echo "Mailer Error: " . $this->phpmailer->ErrorInfo;
+			} else {
+				//echo "Message sent!";
+			}
+			return true;
 		}
-		return true;
-	}
 	}
 
 
@@ -771,8 +772,8 @@ class HomeController extends CI_Controller
 
 		//print_r($data_contact); exit;
 		if ($result) {
-			$subject ="Careers form details";
-			 $this->send_email_career_form($data_contact,$subject);
+			$subject = "Careers form details";
+			$this->send_email_career_form($data_contact, $subject);
 			// echo "Success";
 
 			$response = array(
@@ -791,123 +792,124 @@ class HomeController extends CI_Controller
 		}
 		exit;
 	}
-	public function send_email_career_form($message,$subject)
+	public function send_email_career_form($message, $subject)
 	{
 
 		if (!empty($message['name'])) {
-		//echo "fg"; exit;
-		//	print_r($message); exit();
-		$this->load->library('Phpmailer');
-		$message_body = "
+			//echo "fg"; exit;
+			//	print_r($message); exit();
+			$this->load->library('Phpmailer');
+			$message_body = "
 		<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse; width: 100%;'>
 			<tr>
 				<th>Field</th>
 				<th>Value</th>
 			</tr>";
-	
-	// Add row for Name if it's not empty
-	if (!empty($message['name'])) {
-		$message_body .= "
+
+			// Add row for Name if it's not empty
+			if (!empty($message['name'])) {
+				$message_body .= "
 			<tr>
 				<td>Name</td>
 				<td>{$message['name']}</td>
 			</tr>";
-	}
-	
-	// Add row for Email if it's not empty
-	if (!empty($message['email'])) {
-		$message_body .= "
+			}
+
+			// Add row for Email if it's not empty
+			if (!empty($message['email'])) {
+				$message_body .= "
 			<tr>
 				<td>Email</td>
 				<td>{$message['email']}</td>
 			</tr>";
-	}
-	
-	// Add row for Mobile if it's not empty
-	if (!empty($message['mobile'])) {
-		$message_body .= "
+			}
+
+			// Add row for Mobile if it's not empty
+			if (!empty($message['mobile'])) {
+				$message_body .= "
 			<tr>
 				<td>Mobile</td>
 				<td>{$message['mobile']}</td>
 			</tr>";
-	}
-	
-	// Add row for Applied For if it's not empty
-	if (!empty($message['position'])) {
-		$message_body .= "
+			}
+
+			// Add row for Applied For if it's not empty
+			if (!empty($message['position'])) {
+				$message_body .= "
 			<tr>
 				<td>Applied For</td>
 				<td>{$message['position']}</td>
 			</tr>";
-	}
-	
-	// Add row for Message if it's not empty
-	if (!empty($message['message'])) {
-		$message_body .= "
+			}
+
+			// Add row for Message if it's not empty
+			if (!empty($message['message'])) {
+				$message_body .= "
 			<tr>
 				<td>Message</td>
 				<td>{$message['message']}</td>
 			</tr>";
-	}
-	
-	// Add row for Received At if it's not empty
-	if (!empty($message['created_at'])) {
-		$message_body .= "
+			}
+
+			// Add row for Received At if it's not empty
+			if (!empty($message['created_at'])) {
+				$message_body .= "
 			<tr>
 				<td>Received At</td>
 				<td>{$message['created_at']}</td>
 			</tr>";
-	}
-	
-	$message_body .= "</table>";
-	
-    	 // Define the path to the PDF file
-            $pdfFilePath = FCPATH . $message['resume'];
-        
-           // Check if the file exists
-            if (file_exists($pdfFilePath)) {
-                $this->phpmailer->AddAttachment($pdfFilePath);
-            } 
-        
-	
-		$smtp_host = "localhost";
-		$smtp_user = "info@digitalwinbusinessagency.com";
-		$smtp_password = "digitalwinba@12345";
-		$smtp_port = 25;
+			}
 
-		$mail_from = "info@digitalwinbusinessagency.com";
-		$mail_from_name = "Value HR first";
+			$message_body .= "</table>";
 
-		$mail_to = "chaitanyakadali3@gmail.com";
-		$mail_to_name = "Chaitanya"; 
+			// Define the path to the PDF file
+			$pdfFilePath = FCPATH . $message['resume'];
 
-		$body = $message_body;
+			// Check if the file exists
+			if (file_exists($pdfFilePath)) {
+				$this->phpmailer->AddAttachment($pdfFilePath);
+			}
 
-		$this->phpmailer->IsSMTP();
-		$this->phpmailer->Host = $smtp_host;
-		$this->phpmailer->SMTPDebug = 1;
-		$this->phpmailer->SMTPAuth = true;
-		$this->phpmailer->Port = $smtp_port;
-		$this->phpmailer->Username = $smtp_user;
-		$this->phpmailer->Password = $smtp_password;
-		$this->phpmailer->SetFrom($mail_from, $mail_from_name);
-		$this->phpmailer->AddReplyTo($mail_from, $mail_from_name);
-		$this->phpmailer->Subject = $subject;
-		$this->phpmailer->MsgHTML($body);
-		//$address = $mail_to;
-		$this->phpmailer->AddAttachment($pdfFilePath);
-		$this->phpmailer->AddAddress($mail_to, $mail_to_name);
-		$this->phpmailer->AddAddress('suresh6k@gmail.com', "Suresh");
-		if (!$this->phpmailer->Send()) {
-			// echo "Mailer Error: " . $this->phpmailer->ErrorInfo;
-		} else {
-			//echo "Message sent!";
+
+			$smtp_host = "localhost";
+			$smtp_user = "info@digitalwinbusinessagency.com";
+			$smtp_password = "digitalwinba@12345";
+			$smtp_port = 25;
+
+			$mail_from = "info@digitalwinbusinessagency.com";
+			$mail_from_name = "Value HR first";
+
+			$mail_to = "chaitanyakadali3@gmail.com";
+			$mail_to_name = "Chaitanya";
+
+			$body = $message_body;
+
+			$this->phpmailer->IsSMTP();
+			$this->phpmailer->Host = $smtp_host;
+			$this->phpmailer->SMTPDebug = 1;
+			$this->phpmailer->SMTPAuth = true;
+			$this->phpmailer->Port = $smtp_port;
+			$this->phpmailer->Username = $smtp_user;
+			$this->phpmailer->Password = $smtp_password;
+			$this->phpmailer->SetFrom($mail_from, $mail_from_name);
+			$this->phpmailer->AddReplyTo($mail_from, $mail_from_name);
+			$this->phpmailer->Subject = $subject;
+			$this->phpmailer->MsgHTML($body);
+			//$address = $mail_to;
+			$this->phpmailer->AddAttachment($pdfFilePath);
+			$this->phpmailer->AddAddress($mail_to, $mail_to_name);
+			$this->phpmailer->AddAddress('suresh6k@gmail.com', "Suresh");
+			if (!$this->phpmailer->Send()) {
+				// echo "Mailer Error: " . $this->phpmailer->ErrorInfo;
+			} else {
+				//echo "Message sent!";
+			}
+			return true;
 		}
-		return true;
-	}
 	}
 
-	public function generate_captcha($return_image) {
+	public function generate_captcha($return_image)
+	{
 		// echo "hi";
 		$this->load->helper('captcha');
 
@@ -925,19 +927,19 @@ class HomeController extends CI_Controller
 				'border' => array(255, 255, 255),
 				'text' => array(10, 10, 10),
 				'grid' => array(173, 216, 230)
-		)
-		
+			)
+
 		);
 
-		
+
 		$captcha = create_captcha($captcha_config);
 		// 	echo $captcha['image']; 	
 		// echo $captcha['word'];
 		// Store CAPTCHA information in session
 		$this->session->set_userdata('captcha_code', $captcha['word']);
 
-        // Store CAPTCHA information in session
-        // $this->session->set_userdata('captcha_code', $captcha['word']);
+		// Store CAPTCHA information in session
+		// $this->session->set_userdata('captcha_code', $captcha['word']);
 
 		if ($return_image) {
 			// If $return_image is true, return the image URL
@@ -946,7 +948,7 @@ class HomeController extends CI_Controller
 			// If $return_image is false, echo the image directly
 			return $captcha['image'];
 		}
-    }
+	}
 
 
 
@@ -959,11 +961,11 @@ class HomeController extends CI_Controller
 
 	public function OutdoorAdvertising()
 	{
-		$data['meta_data'] =  $this->Home_model->getSeoRecordById('14'); 
-		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] :"page_title";
-		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] :"meta_description";
-		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
-		
+		$data['meta_data'] =  $this->Home_model->getSeoRecordById('14');
+		$data['page_title'] = !empty($data['meta_data']['meta_name']) ? $data['meta_data']['meta_name'] : "page_title";
+		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
+		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
+
 
 		$this->load->view('home/OutdoorAdvertising', $data);
 	}

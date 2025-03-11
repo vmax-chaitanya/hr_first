@@ -1,4 +1,4 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+<nav class="sidebar sidebar-offcanvas  " id="sidebar">
     <ul class="nav">
         <!-- <li class="nav-item nav-profile">
                         <div class="nav-link">
@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </li> -->
-        <li class="nav-item">
+        <li class="nav-item  ">
             <a class="nav-link" href="index.html">
                 <i class="icon-menu menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
@@ -104,7 +104,7 @@
                     <span class="menu-title">Seo for static </span>
                 </a>
             </li>
-      
+
 
             <!-- <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url(); ?>admin/contact">
@@ -148,7 +148,7 @@
                     </ul>
                 </div>
             </li>
-          
+
         <?php } ?>
         <!-- <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#page-layouts" aria-expanded="false" aria-controls="page-layouts">

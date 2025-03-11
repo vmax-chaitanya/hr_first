@@ -34,7 +34,7 @@
         <!--/////////////////////// header end ////////////////////////-->
 
 
-      <!--==================================================================== 
+        <!--==================================================================== 
             Start Page Banner Section
         =====================================================================-->
         <section class="page-banner-about overlay">
@@ -68,14 +68,14 @@
                             </div>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p> -->
                             <div class="details-image">
-                                <img src="<?php echo base_url(); ?>assets/home/images/services/service-details.jpg" alt="Service Details Image">
+                                <img src="<?php echo base_url('' . $services_detail['image']); ?>" alt="Service Details Image">
                             </div>
-                            <h2><?php echo ucfirst($services_detail['name']);?></h2>
-                            <p><?php echo ucfirst($services_detail['description']);?></p>
+                            <h2><?php echo ucfirst($services_detail['name']); ?></h2>
+                            <p><?php echo ucfirst($services_detail['description']); ?></p>
 
 
                         </div>
-                       
+
                     </div>
                     <!-- <div class="col-lg-4">
                         <div class="service-sidebar">
@@ -105,7 +105,7 @@
         =====================================================================-->
 
 
-       
+
         <!--==================================================================== 
             Start Service Section
         =====================================================================-->
@@ -120,25 +120,25 @@
                     </div>
                 </div>
                 <div class="row">
-                <?php $i = 1;
-                        foreach ($services as $row) : ?>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item wow fadeInUp" data-wow-duration="2s">
-                            <div class="service-icon d-flex">
-                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon1.png" alt="Services">
-                                <a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                            <div class="service-content">
-                                <h4><a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>"><?php echo $row['name']; ?></a></h4>
-                                <p><?php echo substr($row['description'],0,140); ?>  
-                                </p>
-                                <a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>" class="ml-auto"> Read More...<i class="fas fa-angle-double-right"></i></a>
+                    <?php $i = 1;
+                    foreach ($services as $row) : ?>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item wow fadeInUp" data-wow-duration="2s">
+                                <div class="service-icon d-flex">
+                                    <img src="<?php echo base_url(); ?>assets/home/images/services/icon1.png" alt="Services">
+                                    <a href="<?php echo base_url(); ?>services/<?php echo $row['service_url']; ?>" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
+                                </div>
+                                <div class="service-content">
+                                    <h4><a href="<?php echo base_url(); ?>services/<?php echo $row['service_url']; ?>"><?php echo $row['name']; ?></a></h4>
+                                    <p><?php echo substr($row['description'], 0, 140); ?>
+                                    </p>
+                                    <a href="<?php echo base_url(); ?>services/<?php echo $row['service_url']; ?>" class="ml-auto"> Read More...<i class="fas fa-angle-double-right"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <?php $i++;
-                        endforeach; ?>
-                   
+                    endforeach; ?>
+
                 </div>
             </div>
         </section>
@@ -147,7 +147,7 @@
         =====================================================================-->
 
 
-     <!--==================================================================== 
+        <!--==================================================================== 
             Start Call To Action Section
         =====================================================================-->
         <section class="cta-section bg-orange pt-130 rpt-80 pb-135 rpb-100">
