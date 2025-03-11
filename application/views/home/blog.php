@@ -68,25 +68,37 @@
         <!--==================================================================== 
             Start Service Details Section
         =====================================================================-->
-        <div class="container mt-4">
-            <div class="row">
-            <?php $i = 100;
-                    foreach ($blogs as $blog): ?>
-                <div class="col-md-4">
-                    <div class="card">
-                    <div class="date-tag"><?php echo date('j M',strtotime($blog['created_at'])); ?></div>
-                        <img class="card-img-top" src="<?php echo base_url('' . $blog['image']); ?>" alt="Card image">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo ucfirst($blog['title']); ?></h5>
-                            <p class="card-text"><?php echo ucfirst(substr($blog['about'],0,200)); ?></p>
-                            <a href="<?php echo base_url();?>blog-detail/<?php echo $blog['id']; ?>" class="btn btn-primary">Read More</a>
+        <section class=" pt-130 rpt-80 pb-135 rpb-100">
+            <div class="container mt-4 pb-135">
+            <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-8">
+                        <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
+                            <h2> <span>Blogs</span></h2>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
                         </div>
                     </div>
                 </div>
-                <?php endforeach; ?>
-                
+                <div class="row">
+               
+                    
+                    <?php $i = 100;
+                    foreach ($blogs as $blog): ?>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="date-tag"><?php echo date('j M', strtotime($blog['created_at'])); ?></div>
+                                <img class="card-img-top" src="<?php echo base_url('' . $blog['image']); ?>" alt="Card image">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo ucfirst($blog['title']); ?></h5>
+                                    <p class="card-text"><?php echo ucfirst(substr($blog['about'], 0, 200)); ?></p>
+                                    <a href="<?php echo base_url(); ?>blog-detail/<?php echo $blog['id']; ?>" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+
+                </div>
             </div>
-        </div>
+        </section>
         <!--==================================================================== 
             End Service Details Section
         =====================================================================-->
@@ -170,6 +182,28 @@
             End Testimonials Section
         =====================================================================-->
 
+        <!--==================================================================== 
+            Start Call To Action Section
+        =====================================================================-->
+        <section class="cta-section bg-orange pt-130 rpt-80 pb-135 rpb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="cta-text wow fadeInUp rmb-25" data-wow-duration="2s">
+                            <h3>You Want To Work With Best Consulting Solutions Company?</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cta-btn wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+                            <a href="<?php echo base_url(); ?>contact" class="theme-btn">Contact Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--==================================================================== 
+            End Call To Action Section
+        =====================================================================-->
 
         <!--/////////////////////// footer start ////////////////////////-->
 

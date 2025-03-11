@@ -254,69 +254,7 @@
                     </div>
                     <?php $i++;
                         endforeach; ?>
-                    <!-- <div class="col-lg-4 col-md-6">
-                        <div class="service-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
-                            <div class="service-icon d-flex">
-                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon2.png" alt="Services">
-                                <a href="service-details.php?id=rec_sol" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                            <div class="service-content">
-                                <h4><a href="service-details.php?id=rec_sol">Recruitment <br> Solutions</a></h4>
-                                <p>The growth and sustenance of any organization depends on the talent it has. Right recruitment process virtually eliminate the risk of hiring the wrong person for the job.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
-                            <div class="service-icon d-flex">
-                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon3.png" alt="Services">
-                                <a href="service-details.php?id=hr_con" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                            <div class="service-content">
-                                <h4><a href="service-details.php?id=hr_con">HR Advisory & <br> Consulting</a></h4>
-                                <p>HR is a specialized function and it is best managed by those who understand the nuances of HR domain. Starting from Start-ups and SMEs, with different vision and mission </p>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="separetor wow fadeInUp" data-wow-duration="2s"></div> -->
-                    <!-- <div class="col-lg-4 col-md-6">
-                        <div class="service-item wow fadeInUp" data-wow-duration="2s">
-                            <div class="service-icon d-flex">
-                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon4.png" alt="Services">
-                                <a href="service-details.php?id=campus" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                            <div class="service-content">
-                                <h4><a href="service-details.php?id=campus">Campus Hiring <br> Solutions</a></h4>
-                                <p>Our Campus Placement & Pre-Placement Training vertical provides unique and unmatched services aiming to benefit Corporate, Institutes/Colleges and Students equally.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
-                            <div class="service-icon d-flex">
-                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon5.png" alt="Services">
-                                <a href="service-details.php?id=staff" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                            <div class="service-content">
-                                <h4><a href="service-details.php?id=staff">Contractual Staffing<br>& Payroll</a></h4>
-                                <p>mployers tend to hire contractual staff for temporary needs. Managing Temp Staff involves critical aspects. And we are good in that, ensuring total compliance.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
-                            <div class="service-icon d-flex">
-                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon6.png" alt="Services">
-                                <a href="service-details.php?id=train" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                            <div class="service-content">
-                                <h4><a href="service-details.php?id=train">Training & <br> Development</a></h4>
-                                <p>Improved competencies and skill sets are imperative for any business growth and sustenance. To The growth of any organization depends on the talent it has. </p>
-                            </div>
-                        </div>
-                    </div> -->
+                   
                 </div>
             </div>
         </section>

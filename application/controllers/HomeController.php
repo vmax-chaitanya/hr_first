@@ -191,6 +191,7 @@ class HomeController extends CI_Controller
 		$data['meta_description'] = !empty($data['services_detail']['meta_description']) ? $data['services_detail']['meta_description'] :"page_title";
 		$data['meta_keywords'] = !empty($data['services_detail']['meta_keywords']) ? $data['services_detail']['meta_keywords'] :"page_title";
 
+		$data['services'] = $this->Home_model->getCategoryServices(1);
 
 		$service_primary_id = 	 $data['services_detail']['id'];
 		$type = 	 $data['services_detail']['type'];

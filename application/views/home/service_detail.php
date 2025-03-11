@@ -105,20 +105,62 @@
         =====================================================================-->
 
 
+       
         <!--==================================================================== 
+            Start Service Section
+        =====================================================================-->
+        <section class="services-section bg-snow pt-10 rpt-90 pb-50 rpb-60">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-8">
+                        <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
+                            <h2>Other <span>Services</span></h2>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                <?php $i = 1;
+                        foreach ($services as $row) : ?>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item wow fadeInUp" data-wow-duration="2s">
+                            <div class="service-icon d-flex">
+                                <img src="<?php echo base_url(); ?>assets/home/images/services/icon1.png" alt="Services">
+                                <a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>" class="ml-auto"><i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                            <div class="service-content">
+                                <h4><a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>"><?php echo $row['name']; ?></a></h4>
+                                <p><?php echo substr($row['description'],0,140); ?>  
+                                </p>
+                                <a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>" class="ml-auto"> Read More...<i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php $i++;
+                        endforeach; ?>
+                   
+                </div>
+            </div>
+        </section>
+        <!--==================================================================== 
+            End Service Section
+        =====================================================================-->
+
+
+     <!--==================================================================== 
             Start Call To Action Section
         =====================================================================-->
-        <section class="cta-section bg-snow pt-130 rpt-80 pb-135 rpb-100">
+        <section class="cta-section bg-orange pt-130 rpt-80 pb-135 rpb-100">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
                         <div class="cta-text wow fadeInUp rmb-25" data-wow-duration="2s">
-                            <h3>You Want To Work With Best Consulting<span> Solutions Company?</span></h3>
+                            <h3>You Want To Work With Best Consulting Solutions Company?</h3>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="cta-btn wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
-                            <a href="contact.html" class="theme-btn">Contact Now <i class="fas fa-arrow-right"></i></a>
+                            <a href="<?php echo base_url(); ?>contact" class="theme-btn">Contact Now <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -127,8 +169,6 @@
         <!--==================================================================== 
             End Call To Action Section
         =====================================================================-->
-
-
 
 
         <!--/////////////////////// footer start ////////////////////////-->

@@ -35,7 +35,8 @@
         <!--==================================================================== 
             Start Page Banner Section
         =====================================================================-->
-        <section class="page-banner overlay">
+        <!-- <section class="page-banner overlay"> -->
+        <section class="page-banner overlay" style="background-image: url('<?php echo base_url('' . $blog['banner_image']); ?>'); background-size: cover; background-position: center; background-repeat: no-repeat;">
             <div class="container">
                 <div class="banner-inner">
                     <h2 class="wow fadeInUp" data-wow-duration="1.5s">Blog</h2>
@@ -56,13 +57,13 @@
         <!--==================================================================== 
             Start Service Details Section
         =====================================================================-->
-        <section class="service-details pt-140 pb-150 rpt-90 rpb-100">
+        <section class="service-details pt-50 pb-50 rpt-90 rpb-100">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="service-details-content" id ="exe_search">
                              <div class="details-image">
-                                <img src="<?php echo base_url();?>assets/home/images/services/service-details.jpg" alt="Service Details Image">
+                                <img src="<?php echo base_url('' . $blog['image']); ?>" alt="Service Details Image">
                             </div>
                             <h2><?php echo ucfirst($blog['title']);?></h2>
                             <p><?php echo ucfirst($blog['description']);?></p>
