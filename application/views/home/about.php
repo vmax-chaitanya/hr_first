@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from live.envalab.com/html/conset/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Apr 2022 07:22:11 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +8,67 @@
     <title>About Us || Conset - Business Consulting HTML5 Template</title>
 
     <?php include("includes/styles.php"); ?>
+    <style>
+        .faq-section {
+            background: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        /* .faq-section .section-title h2 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .faq-section .section-title span {
+        color: var(--primary-color, #fe6600);
+    } */
+        .faq-card {
+            border: none;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .faq-card .card-header {
+            background: #fff;
+            padding: 15px 20px;
+            border-radius: 8px;
+        }
+
+        .faq-card .btn-link {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+            /* Changed text color to black */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .faq-card .btn-link:focus {
+            text-decoration: none;
+        }
+
+        .faq-card .btn-link .arrow {
+            color: var(--primary-color, #fe6600);
+            /* Arrow in primary color */
+            transition: transform 0.3s ease;
+        }
+
+        .faq-card .btn-link[aria-expanded="true"] .arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-card .card-body {
+            padding: 15px 20px;
+            font-size: 16px;
+            color: #000;
+            /* Changed body text color to black */
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
 
 <body>
@@ -136,7 +195,7 @@
                                 <div class="section-title">
                                     <h2>Our Mission</span></h2>
                                 </div>
-                                <p>  <?php echo $social_media['vision']; ?> </p>
+                                <p> <?php echo $social_media['vision']; ?> </p>
                                 <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> -->
                                 <!-- <div class="success-item bg-snow">
                                     <div class="icon-image">
@@ -229,7 +288,7 @@
         =====================================================================-->
 
 
-       <!--==================================================================== 
+        <!--==================================================================== 
             Start Team Section
         =====================================================================-->
         <section class="team-section pt-50 rpt-90 pb-50 rpb-40">
@@ -237,7 +296,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-md-8">
                         <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
-                            
+
                             <h2>Our <span>Team</span></h2>
 
                             <!--     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
@@ -296,7 +355,7 @@
 
 
 
-         <!--==================================================================== 
+        <!--==================================================================== 
             Start Testimonial Section
         =====================================================================-->
         <section class="testimonial-section pt-50 rpt-85 pb-50 rpb-100">
@@ -325,9 +384,9 @@
                                     <!-- <img src="<?php echo base_url('' . $banner['gender']); ?>" class="profile-img" alt="John Doe"> -->
 
                                     <?php if ($row['gender'] == 1) { ?>
-                                        <img src="<?php echo base_url(); ?>assets/home/images/testimonials/male.jpg" class="profile-img" >
+                                        <img src="<?php echo base_url(); ?>assets/home/images/testimonials/male.jpg" class="profile-img">
                                     <?php } else { ?>
-                                        <img src="<?php echo base_url(); ?>assets/home/images/testimonials/female.jpg" class="profile-img" >
+                                        <img src="<?php echo base_url(); ?>assets/home/images/testimonials/female.jpg" class="profile-img">
                                     <?php } ?>
                                     <h5><?php echo $row['name']; ?></h5>
                                     <p class="testimonial-text"><?php echo $row['description']; ?></p>
@@ -369,10 +428,10 @@
             End Testimonials Section
         =====================================================================-->
 
-             <!--==================================================================== 
+        <!--==================================================================== 
             Start Call To Action Section
         =====================================================================-->
-        <section class="cta-section bg-orange pt-130 rpt-80 pb-135 rpb-100">
+        <!-- <section class="cta-section bg-orange pt-130 rpt-80 pb-135 rpb-100">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
@@ -387,10 +446,49 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--==================================================================== 
             End Call To Action Section
         =====================================================================-->
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-md-8 col-sm-9">
+                        <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
+                            <h2>Frequently Asked <span>Questions</span></h2>
+
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="faqAccordion">
+                    <!-- FAQ Item 1 -->
+                    <?php $k = 1;
+                    foreach ($faqs as $row) : ?>
+                        <div class="card faq-card">
+                            <div class="card-header" id="faqHeading<?php echo $k;?>">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faqCollapse<?php echo $k;?>" aria-expanded="false">
+                                        <?php echo $row['question']; ?>
+                                        <span class="arrow">▼</span>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="faqCollapse<?php echo $k;?>" class="collapse" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    <?php echo $row['answer']; ?>
+
+                                </div>
+                            </div>
+                        </div>
+                    <?php $k++; endforeach; ?>
+
+                </div>
+            </div>
+        </section>
+
 
         <!--/////////////////////// footer start ////////////////////////-->
 

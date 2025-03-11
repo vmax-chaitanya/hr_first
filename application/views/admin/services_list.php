@@ -68,7 +68,7 @@
                                                     <tr>
                                                         <td><?php echo $i++; ?></td>
                                                         <td><?php echo $service['name']; ?></td>
-                                                        <td><?php echo $service['description']; ?></td>
+                                                        <td><?php echo substr($service['description'],0,100); ?></td>
                                                         <td>
                                                             <?php if ($service['image']) : ?>
                                                                 <img src="<?php echo base_url('' . $service['image']); ?>" alt="Service Image" width="150">
@@ -86,8 +86,8 @@
                                                             <?php endif; ?>
                                                         </td>
                                                         <td>
-                                                        <a href="<?php echo base_url('admin/faq?service_id=' . $service['id']); ?>" class="btn btn-outline-secondary">Add Faqs </a>
-                                                        <a href="<?php echo base_url('admin/services_cards/' . $service['id']); ?>" class="btn btn-outline-secondary">Add Service Cards</a>
+                                                        <!-- <a href="<?php echo base_url('admin/faq?service_id=' . $service['id']); ?>" class="btn btn-outline-secondary">Add Faqs </a>
+                                                        <a href="<?php echo base_url('admin/services_cards/' . $service['id']); ?>" class="btn btn-outline-secondary">Add Service Cards</a> -->
 
                                                         <a href="<?php echo base_url('admin/services/edit/' . $service['id']); ?>" class="btn btn-outline-primary">Edit</a>
                                                             <a href="<?php echo base_url('admin/services/delete/' . $service['id']); ?>" class="btn btn-outline-danger" onclick="return confirm('Are you sure you want to delete this service?')">Delete</a>

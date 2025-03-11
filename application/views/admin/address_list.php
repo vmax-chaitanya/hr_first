@@ -29,9 +29,9 @@
                                 <div class="col-md-10">
                                     <h4 class="card-title">Data table</h4>
                                 </div>
-                                <div class="col-md-2 ms-auto">
-                                <a href="<?php echo base_url(); ?>admin/address/add" class="w-100 btn btn-primary">Create</a>
-                                </div>
+                                <!-- <div class="col-md-2 ms-auto">
+                                    <a href="<?php echo base_url(); ?>admin/address/add" class="w-100 btn btn-primary">Create</a>
+                                </div> -->
                             </div>
 
 
@@ -80,7 +80,7 @@
                                                         </td>
                                                         <td>
                                                             <a href="<?php echo site_url('admin/address/edit/' . $address['id']); ?>" class="btn btn-outline-primary">Edit</a>
-                                                            <a href="<?php echo site_url('admin/address/delete/' . $address['id']); ?>" class="btn btn-outline-danger" onclick="return confirm('Are you sure you want to delete this address?')">Delete</a>
+                                                            <!-- <a href="<?php echo site_url('admin/address/delete/' . $address['id']); ?>" class="btn btn-outline-danger" onclick="return confirm('Are you sure you want to delete this address?')">Delete</a> -->
                                                         </td>
                                                     </tr>
                                                 <?php endforeach; ?>

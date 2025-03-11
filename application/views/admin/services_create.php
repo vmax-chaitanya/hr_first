@@ -31,7 +31,7 @@
                         <div class="col-12 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Horizontal Two column</h4>
+                                    <h4 class="card-title">Service Details</h4>
                                     <?php echo validation_errors('<div class="alert alert-danger">', '</div>'); ?>
                                     <?php //echo form_open_multipart('admin/banner/create'); 
                                     ?>
@@ -106,7 +106,7 @@
                                         </div>
 
 
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 col-form-label">Banner Image</label>
@@ -126,7 +126,7 @@
                                                 </div>
                                             </div>
 
-                                        </div>
+                                        </div> -->
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group row">
@@ -150,7 +150,7 @@
                                                 </div>
                                             </div>
                                         </div> -->
-                                        <hr>
+                                        <!-- <hr>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group row">
@@ -213,7 +213,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr> -->
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group row">

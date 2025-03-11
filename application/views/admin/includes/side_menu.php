@@ -48,7 +48,7 @@
                     <span class="menu-title">Services</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url(); ?>admin/training">
                     <i class="icon-handbag menu-icon"></i>
                     <span class="menu-title">Training</span>
@@ -59,7 +59,7 @@
                     <i class="icon-handbag menu-icon"></i>
                     <span class="menu-title">Certification Courses</span>
                 </a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url(); ?>admin/faq">
                     <i class="icon-handbag menu-icon"></i>
@@ -104,7 +104,7 @@
                     <span class="menu-title">Seo for static </span>
                 </a>
             </li>
-        <?php } else { ?>
+      
 
             <!-- <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url(); ?>admin/contact">

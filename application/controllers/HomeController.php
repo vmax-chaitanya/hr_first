@@ -48,6 +48,7 @@ class HomeController extends CI_Controller
 		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords'])? $data['meta_data']['meta_keywords'] :"meta_keywords";
 	
 		$data['team'] = $this->Home_model->getActiveTeams();
+		$data['faqs'] = $this->Home_model->getActiveFaqs();
 		$data['testimonial'] = $this->Home_model->getActiveTestimonial();
 
 		$this->load->view('home/about', $data);
@@ -121,7 +122,7 @@ class HomeController extends CI_Controller
 
 	// public function blog() {
 	//     // Load the blog view
-	//     $data['page_title']="Home || Digital win ||";
+	//     $data['page_title']="Home || Value HR first||";
 
 	//     $this->load->view('home/blog',$data);
 	// }
@@ -517,7 +518,7 @@ class HomeController extends CI_Controller
 // 		$smtp_port = 25;
 
 // 		$mail_from = "info@digitalwinbusinessagency.com";
-// 		$mail_from_name = "Digital Win Business Agency";
+// 		$mail_from_name = "Value HR first";
 
 // 		$mail_to = "chaitanyakadali3@gmail.com";
 // 		$mail_to_name = "RDS Support";
@@ -696,7 +697,7 @@ class HomeController extends CI_Controller
 		$smtp_port = 25;
 
 		$mail_from = "info@digitalwinbusinessagency.com";
-		$mail_from_name = "Digital Win Business Agency";
+		$mail_from_name = "Value HR first";
 
 		$mail_to = "chaitanyakadali3@gmail.com";
 		$mail_to_name = "Chaitanya";
@@ -875,7 +876,7 @@ class HomeController extends CI_Controller
 		$smtp_port = 25;
 
 		$mail_from = "info@digitalwinbusinessagency.com";
-		$mail_from_name = "Digital Win Business Agency";
+		$mail_from_name = "Value HR first";
 
 		$mail_to = "chaitanyakadali3@gmail.com";
 		$mail_to_name = "Chaitanya"; 

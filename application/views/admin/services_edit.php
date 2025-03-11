@@ -39,7 +39,7 @@
                                     <form class="form-sample" method="POST" action="<?php echo site_url('admin/services/update/' . $service['id']); ?>" enctype="multipart/form-data">
                                         <p class="card-description">Service Details</p>
                                         <div class="row">
-                                            
+
                                             <div class="col-md-6">
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 col-form-label">Type</label>
@@ -47,9 +47,11 @@
                                                         <select class="form-control" name="type" required>
                                                             <option value="">Select Type</option>
                                                             <?php foreach ($categories as $row) : ?>
-                                                                <option value="<?php echo $row['id'];?>" <?php if($row['id'] == $service['type']){ echo "selected";}?>><?php echo $row['name'];?></option>
+                                                                <option value="<?php echo $row['id']; ?>" <?php if ($row['id'] == $service['type']) {
+                                                                                                                echo "selected";
+                                                                                                            } ?>><?php echo $row['name']; ?></option>
                                                             <?php endforeach; ?>
-                                                          
+
                                                         </select>
                                                         <?php echo form_error('type', '<p class="text-danger">', '</p>'); ?>
                                                     </div>
@@ -86,7 +88,7 @@
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 col-form-label">Icon</label>
                                                     <div class="col-sm-9">
-                                                        <input type="file" class="form-control" name="icon" >
+                                                        <input type="file" class="form-control" name="icon">
                                                         <?php echo form_error('icon', '<p class="text-danger">', '</p>'); ?>
                                                         <?php if ($service['icon']): ?>
                                                             <img src="<?php echo base_url('' . $service['icon']); ?>"
@@ -109,13 +111,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                          
+
                                         </div>
 
-                                       
 
-                                        <div class="row">
-                                        <div class="col-md-6">
+
+                                        <!-- <div class="row">
+                                            <div class="col-md-6">
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 col-form-label">Banner Image</label>
                                                     <div class="col-sm-9">
@@ -138,39 +140,39 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                           
-                                        </div>
+
+                                        </div> -->
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Description</label>
                                                     <div class="col-sm-10">
-                                                        <textarea class="form-control" name="description" rows="4"  id="editor" required><?php echo $service['description']; ?></>
+                                                        <textarea class="form-control" name="description" rows="4" id="editor" required><?php echo $service['description']; ?></>
                                                         <?php echo form_error('description', '<p class="text-danger">', '</p>'); ?>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="row">
+                                         <!-- <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Description 1</label>
                                                     <div class="col-sm-10">
                                                         <textarea class="form-control" name="description_new" rows="4"
                                                             required><?php echo set_value('description_new', $service['description_new']); ?></textarea>
-                                                      
+
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>  -->
-                                        <hr>
+                                        </div> -->
+                                        <!-- <hr>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 col-form-label">Module name 1</label>
                                                     <div class="col-sm-9">
                                                         <input type="text" class="form-control" name="module_name_1"
-                                                            value="<?php echo $service['module_name_1']; ?>"  >
+                                                            value="<?php echo $service['module_name_1']; ?>">
                                                         <?php echo form_error('module_name_1', '<p class="text-danger">', '</p>'); ?>
                                                     </div>
                                                 </div>
@@ -179,8 +181,8 @@
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 col-form-label">Module Quote 1</label>
                                                     <div class="col-sm-9">
-                                                    <input type="text" class="form-control" name="module_quote_1"
-                                                            value="<?php echo $service['module_quote_1']; ?>" >
+                                                        <input type="text" class="form-control" name="module_quote_1"
+                                                            value="<?php echo $service['module_quote_1']; ?>">
                                                         <?php echo form_error('module_quote_1', '<p class="text-danger">', '</p>'); ?>
                                                     </div>
                                                 </div>
@@ -193,7 +195,7 @@
                                                     <label class="col-sm-3 col-form-label">Module name 2</label>
                                                     <div class="col-sm-9">
                                                         <input type="text" class="form-control" name="module_name_2"
-                                                            value="<?php echo $service['module_name_2']; ?>" >
+                                                            value="<?php echo $service['module_name_2']; ?>">
                                                         <?php echo form_error('module_name_2', '<p class="text-danger">', '</p>'); ?>
                                                     </div>
                                                 </div>
@@ -202,8 +204,8 @@
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 col-form-label">Module Quote 2</label>
                                                     <div class="col-sm-9">
-                                                    <input type="text" class="form-control" name="module_quote_2"
-                                                            value="<?php echo $service['module_quote_2']; ?>" >
+                                                        <input type="text" class="form-control" name="module_quote_2"
+                                                            value="<?php echo $service['module_quote_2']; ?>">
                                                         <?php echo form_error('module_quote_2', '<p class="text-danger">', '</p>'); ?>
                                                     </div>
                                                 </div>
@@ -216,7 +218,7 @@
                                                     <label class="col-sm-3 col-form-label">Module name 3</label>
                                                     <div class="col-sm-9">
                                                         <input type="text" class="form-control" name="module_name_3"
-                                                            value="<?php echo $service['module_name_3']; ?>" >
+                                                            value="<?php echo $service['module_name_3']; ?>">
                                                         <?php echo form_error('module_name_3', '<p class="text-danger">', '</p>'); ?>
                                                     </div>
                                                 </div>
@@ -225,20 +227,20 @@
                                                 <div class="form-group row">
                                                     <label class="col-sm-3 col-form-label">Module Quote 3</label>
                                                     <div class="col-sm-9">
-                                                    <input type="text" class="form-control" name="module_quote_3"
-                                                            value="<?php echo $service['module_quote_3']; ?>" >
+                                                        <input type="text" class="form-control" name="module_quote_3"
+                                                            value="<?php echo $service['module_quote_3']; ?>">
                                                         <?php echo form_error('module_quote_3', '<p class="text-danger">', '</p>'); ?>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr>
+                                        <hr> -->
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Meta Name</label>
                                                     <div class="col-sm-10">
-                                                        <textarea class="form-control" name="meta_name" rows="6"  ><?php echo $service['meta_name']; ?></textarea>
+                                                        <textarea class="form-control" name="meta_name" rows="6"><?php echo $service['meta_name']; ?></textarea>
                                                         <?php echo form_error('meta_name', '<p class="text-danger">', '</p>'); ?>
                                                     </div>
                                                 </div>
@@ -249,7 +251,7 @@
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Meta Description</label>
                                                     <div class="col-sm-10">
-                                                        <textarea class="form-control" name="meta_description" rows="6"  ><?php echo $service['meta_description']; ?></textarea>
+                                                        <textarea class="form-control" name="meta_description" rows="6"><?php echo $service['meta_description']; ?></textarea>
                                                         <?php echo form_error('meta_description', '<p class="text-danger">', '</p>'); ?>
                                                     </div>
                                                 </div>
@@ -260,7 +262,7 @@
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 col-form-label">Meta Keywords</label>
                                                     <div class="col-sm-10">
-                                                        <textarea class="form-control" name="meta_keywords" rows="6"  ><?php echo $service['meta_keywords']; ?></textarea>
+                                                        <textarea class="form-control" name="meta_keywords" rows="6"><?php echo $service['meta_keywords']; ?></textarea>
                                                         <?php echo form_error('meta_keywords', '<p class="text-danger">', '</p>'); ?>
                                                     </div>
                                                 </div>
@@ -269,8 +271,8 @@
                                         <div class="row">
                                             <div class="col-md-9"></div>
                                             <div class="col-md-3">
-                                            <input type="hidden" class="form-control" name="old_image" value="<?php echo $service['image']; ?>" >
-                                            <input type="hidden" name="old_icon"
+                                                <input type="hidden" class="form-control" name="old_image" value="<?php echo $service['image']; ?>">
+                                                <input type="hidden" name="old_icon"
                                                     value="<?php echo $service['icon']; ?>" />
                                                 <input type="hidden" name="old_banner_image"
                                                     value="<?php echo $service['banner_image']; ?>" />
