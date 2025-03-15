@@ -399,7 +399,7 @@
                         </div>
                         <div class="team-desc">
                             <h3> <?php echo $row['title']; ?></h3>
-                            <p class="fs-200"> <?php echo $row['description']; ?></p>
+                            <p class="fs-200 " style="text-align: center;"> <?php echo $row['description']; ?></p>
                         </div>
                     </div>
                 <?php $j++;
@@ -486,13 +486,13 @@
         <!--==================================================================== 
             Start Testimonial Section
         =====================================================================-->
-        <section class="testimonial-section pt-50 rpt-85 pb-50 rpb-100">
+        <!-- <section class="testimonial-section pt-50 rpt-85 pb-50 rpb-100">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-md-8 col-sm-9">
                         <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
                             <h2>What Clients Say <span>About Us!</span></h2>
-                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
+                          
                         </div>
                     </div>
                 </div>
@@ -509,8 +509,7 @@
                         foreach ($testimonial as $row) : ?>
                             <div class="carousel-item <?php echo $i == 1 ? 'active' : ''; ?>">
                                 <div class="testimonial-card">
-                                    <!-- <img src="<?php echo base_url('' . $banner['gender']); ?>" class="profile-img" alt="John Doe"> -->
-
+                                  
                                     <?php if ($row['gender'] == 1) { ?>
                                         <img src="<?php echo base_url(); ?>assets/home/images/testimonials/male.jpg" class="profile-img" width="80px" height="80px">
                                     <?php } else { ?>
@@ -522,7 +521,7 @@
                             </div>
                         <?php $i++;
                         endforeach; ?>
-                        <!-- <div class="carousel-item">
+                        <div class="carousel-item">
                         <div class="testimonial-card">
                             <img src="<?php echo base_url(); ?>assets/home/images/team/team02.png" class="profile-img" alt="Jane Smith">
                             <h5>Jane Smith</h5>
@@ -536,11 +535,11 @@
                             <h5>Michael Johnson</h5>
                             <p class="testimonial-text">"Absolutely loved their work! Will definitely use their services again."</p>
                         </div>
-                    </div> -->
+                    </div> 
 
                     </div>
 
-                    <!-- Controls -->
+                   
                     <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -551,7 +550,7 @@
                     </a>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--==================================================================== 
             End Testimonials Section
         =====================================================================-->
@@ -578,6 +577,28 @@
         <!--==================================================================== 
             End Call To Action Section
         =====================================================================-->
+        <section class="cta-section  pt-50 rpt-80 pb-50 rpb-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-md-8">
+                        <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
+                            <h2>Our <span>Clients</span></h2>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="owl-carousel client-logo-carousel">
+                    <div class="item"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" alt="Client 1" class="img-fluid"></div>
+                    <div class="item"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" alt="Client 2" class="img-fluid"></div>
+                    <div class="item"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" alt="Client 3" class="img-fluid"></div>
+                    <div class="item"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" alt="Client 4" class="img-fluid"></div>
+                    <div class="item"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" alt="Client 5" class="img-fluid"></div>
+                </div>
+            </div>
+        </section>
+
 
         <!--/////////////////////// footer start ////////////////////////-->
 

@@ -47,9 +47,9 @@
                 <div class="widget menu-widget">
                     <h3 class="widget-title">Our Services</h3>
                     <ul>
-                        <li><a href="#">Start ups’ HR Department Set up.</a></li>
-                        <li><a href="#">SMEs HR Department Management</a></li>
-                        <li><a href="#">Recruitment Solutions</a></li>
+                        <li><a href="#">Start ups’ HR Set up.</a></li>
+                        <li><a href="#">SMEs HR Management</a></li>
+                        <!-- <li><a href="#">Recruitment Solutions</a></li> -->
                         <li><a href="#">Training/Soft Skills</a></li>
                         <li><a href="#">HR Audit, Formats, Policies</a></li>
                         <!--  <li><a href="#">Payroll, ESI, PF Registration</a></li>
@@ -70,8 +70,8 @@
                                 <li><a href="#">Recruitment Solutions</a></li>
                                 <li><a href="#">Training/Soft Skills</a></li>
                                 <li><a href="#">HR Audit, Formats, Policies</a></li> -->
-                        <li><a href="#">Payroll, ESI, PF Registration</a></li>
-                        <li><a href="#">Manpower Outsourcing</a></li>
+                        <li><a href="#">Payroll, ESI, PF Registrations</a></li>
+                        <!-- <li><a href="#">Manpower Outsourcing</a></li> -->
                         <li><a href="#">HR Compliance Management</a></li>
                         <li><a href="#">HR Legal Matters</a></li>
                         <li><a href="#">HR Projects – ESS, ECS etc…</a></li>

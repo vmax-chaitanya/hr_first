@@ -13,9 +13,34 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <!-- ////custom scripts  -->
+
+
+  <script>
+    $(document).ready(function() {
+      $(".client-logo-carousel").owlCarousel({
+        loop: true, // Infinite loop
+        margin: 10, // Space between logos
+        nav: false, // Hide navigation arrows
+        autoplay: true, // Auto-slide
+        autoplayTimeout: 2000, // 2 seconds per slide
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 2
+          }, // 2 logos on small screens
+          600: {
+            items: 3
+          }, // 3 logos on medium screens
+          1000: {
+            items: 5
+          } // 5 logos on large screens
+        }
+      });
+    });
+  </script>
 
   <script>
     toastr.options = {
