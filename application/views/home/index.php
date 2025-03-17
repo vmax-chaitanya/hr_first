@@ -191,6 +191,14 @@
         =====================================================================-->
         <section class="about-us pb-100 rpb-100">
             <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
+                            <h2>ONE STOP SOLUTION FOR ALL YOUR <span>HR NEEDS.</span></h2>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
+                        </div>
+                    </div>
+                </div>
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="about-image rmb-50">
@@ -199,6 +207,12 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
+                        <div class="about-image rmb-50">
+                            <img class="wow fadeInBottomLeft" data-wow-duration="2s" src="<?php echo base_url(); ?>assets/home/images/about/abbout.png" alt="About Image">
+                            <div class="about-border"></div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-6">
                         <div class="about-content">
                             <div class="section-title mb-25 wow fadeInUp" data-wow-duration="2s">
                                 <h2>ONE STOP SOLUTION <br> FOR ALL YOUR <span>HR NEEDS.</span></h2>
@@ -206,11 +220,9 @@
                             <p class="wow fadeInUp" data-wow-duration="2s">Over the years, we have built our credibility and have emerged as a service partner of choice with many multinationals and Indian organizations alike.
                             </p>
 
-                            <!-- <i class="wow fadeInUp" data-wow-duration="2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</i> -->
-
                             <a href="<?php echo base_url(); ?>about.php" class="theme-btn wow fadeInUp" data-wow-duration="2s">Explore More <i class="fas fa-arrow-right"></i></a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
