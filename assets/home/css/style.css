@@ -96,7 +96,7 @@ h1 {
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 50px;
 }
 
 h3 {
@@ -623,6 +623,51 @@ input[type="submit"]:focus {
     border-radius: 100px 0 0 0;
     clip-path: polygon(100% 0, 100% 100%, 110px 100%, 0 calc(100% - 110px), 0 0);
 }
+
+
+/* /// */
+.about-image-right {
+    max-width: 500px;
+    padding: 50px;
+    position: relative;
+}
+
+.about-image-right:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    z-index: -1;
+    background: var(--primary-color, #fe6600);
+}
+
+.about-image-right:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 191px;
+    height: 191px;
+    z-index: -1;
+    background: #292929;
+    /* clip-path: polygon(100% 100%, 0 100%, 0 0); */
+    /* clip-path: polygon(0% 100%, 100% 0, 0 0); */
+    clip-path: polygon(100% 100%, 100% 0, 0% 100%);
+
+
+}
+
+.about-image-right img {
+    border-radius: 0 100px 0 0;
+    /* clip-path: polygon(100% 0, 100% 100%, 110px 100%, 0 calc(100% - 110px), 0 0); */
+    clip-path: polygon(100% 0, 100% calc(100% - 110px), calc(100% - 110px) 100%, 0 100%, 0 0);
+
+}
+
+
 
 /*Custom Animation*/
 @-webkit-keyframes fadeInBottomLeft {

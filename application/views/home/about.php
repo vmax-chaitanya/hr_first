@@ -358,13 +358,13 @@
         <!--==================================================================== 
             Start Testimonial Section
         =====================================================================-->
-        <section class="testimonial-section pt-50 rpt-85 pb-50 rpb-100">
+        <!-- <section class="testimonial-section pt-50 rpt-85 pb-50 rpb-100">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-md-8 col-sm-9">
                         <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
                             <h2>What Clients Say <span>About Us!</span></h2>
-                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
+                          
                         </div>
                     </div>
                 </div>
@@ -381,8 +381,7 @@
                         foreach ($testimonial as $row) : ?>
                             <div class="carousel-item <?php echo $i == 1 ? 'active' : ''; ?>">
                                 <div class="testimonial-card">
-                                    <!-- <img src="<?php echo base_url('' . $banner['gender']); ?>" class="profile-img" alt="John Doe"> -->
-
+                                 
                                     <?php if ($row['gender'] == 1) { ?>
                                         <img src="<?php echo base_url(); ?>assets/home/images/testimonials/male.jpg" class="profile-img">
                                     <?php } else { ?>
@@ -394,7 +393,7 @@
                             </div>
                         <?php $i++;
                         endforeach; ?>
-                        <!-- <div class="carousel-item">
+                        <div class="carousel-item">
                         <div class="testimonial-card">
                             <img src="<?php echo base_url(); ?>assets/home/images/team/team02.png" class="profile-img" alt="Jane Smith">
                             <h5>Jane Smith</h5>
@@ -408,11 +407,11 @@
                             <h5>Michael Johnson</h5>
                             <p class="testimonial-text">"Absolutely loved their work! Will definitely use their services again."</p>
                         </div>
-                    </div> -->
+                    </div>
 
                     </div>
 
-                    <!-- Controls -->
+                  
                     <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -423,7 +422,7 @@
                     </a>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--==================================================================== 
             End Testimonials Section
         =====================================================================-->
@@ -468,22 +467,23 @@
                     <?php $k = 1;
                     foreach ($faqs as $row) : ?>
                         <div class="card faq-card">
-                            <div class="card-header" id="faqHeading<?php echo $k;?>">
+                            <div class="card-header" id="faqHeading<?php echo $k; ?>">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faqCollapse<?php echo $k;?>" aria-expanded="false">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faqCollapse<?php echo $k; ?>" aria-expanded="false">
                                         <?php echo $row['question']; ?>
                                         <span class="arrow">▼</span>
                                     </button>
                                 </h5>
                             </div>
-                            <div id="faqCollapse<?php echo $k;?>" class="collapse" data-parent="#faqAccordion">
+                            <div id="faqCollapse<?php echo $k; ?>" class="collapse" data-parent="#faqAccordion">
                                 <div class="card-body">
                                     <?php echo $row['answer']; ?>
 
                                 </div>
                             </div>
                         </div>
-                    <?php $k++; endforeach; ?>
+                    <?php $k++;
+                    endforeach; ?>
 
                 </div>
             </div>

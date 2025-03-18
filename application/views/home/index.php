@@ -203,13 +203,14 @@
                     <div class="col-lg-6">
                         <div class="about-image rmb-50">
                             <img class="wow fadeInBottomLeft" data-wow-duration="2s" src="<?php echo base_url(); ?>assets/home/images/about/abbout.png" alt="About Image">
-                            <div class="about-border"></div>
+                            <!-- <div class="about-border"></div> -->
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="about-image rmb-50">
-                            <img class="wow fadeInBottomLeft" data-wow-duration="2s" src="<?php echo base_url(); ?>assets/home/images/about/abbout.png" alt="About Image">
-                            <div class="about-border"></div>
+                        <div class="about-image-right rmb-50">
+                            <!-- <div class="about-border"></div> -->
+                            <img class="wow fadeInBottomLeft" data-wow-duration="2s" src="<?php echo base_url(); ?>assets/home/images/about/abbout1.png" alt="About Image">
+
                         </div>
                     </div>
                     <!-- <div class="col-lg-6">
