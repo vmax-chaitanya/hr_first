@@ -17,8 +17,9 @@
 
                         </li>
                         <li>
-                            <h5>Call Now:</h5>
+                            <h5>Call :</h5>
                             <p><a href="callto:+91 <?php echo $address['contact_1']; ?>">+91 <?php echo $address['contact_1']; ?></a></p>
+                            <p><a href="mailto:<?php echo $social_media['gmail']; ?>"><?php echo $social_media['gmail']; ?></a></p>
                             <!-- <p><a href="callto:040-2374 6309">040-2374 6309</a></p> -->
                         </li>
                     </ul>
