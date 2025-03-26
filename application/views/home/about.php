@@ -297,7 +297,7 @@
                     <div class="col-xl-7 col-md-8">
                         <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
 
-                            <h2>Our <span>Team</span></h2>
+                        <h2> <span>Founder Director</span></h2>
 
                             <!--     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
                         </div>
@@ -321,7 +321,7 @@
                         </div> -->
                         </div>
                         <div class="team-desc">
-                            <h3> <?php echo $row['title']; ?></h3>
+                            <h3 style="text-align: center;"> <?php echo $row['title']; ?></h3>
                             <p class="fs-200"> <?php echo $row['description']; ?></p>
                         </div>
                     </div>

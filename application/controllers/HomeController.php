@@ -27,6 +27,7 @@ class HomeController extends CI_Controller
 		$data['meta_description'] = !empty($data['meta_data']['meta_description']) ? $data['meta_data']['meta_description'] : "meta_description";
 		$data['meta_keywords'] = !empty($data['meta_data']['meta_keywords']) ? $data['meta_data']['meta_keywords'] : "meta_keywords";
 		$data['tools'] = $this->Home_model->getActiveTools();
+		$data['clients'] = $this->Home_model->getActiveClients();
 		$data['team'] = $this->Home_model->getActiveTeams();
 		$data['testimonial'] = $this->Home_model->getActiveTestimonial();
 

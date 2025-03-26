@@ -75,6 +75,12 @@ class Home_model extends CI_Model
         $this->db->where('type', '3');
         return $this->db->get('gallery')->result_array();
     }
+    public function getActiveClients()
+    {
+        $this->db->where('status', '1');
+        $this->db->where('type', '2');
+        return $this->db->get('gallery')->result_array();
+    }
     public function getActiveTeams()
     {
         $this->db->where('status', '1');

@@ -140,7 +140,7 @@
                                     <i class="flaticon-people"></i>
                                 </div>
                                 <div class="success-content">
-                                    <span class="count-text" data-speed="2500" data-stop="100">150</span>
+                                    <span class="count-text" data-speed="2500" data-stop="150">100</span>
                                     <p>Happy Clients</p>
                                 </div>
                             </div>
@@ -173,7 +173,7 @@
                                     <i class="flaticon-review"></i>
                                 </div>
                                 <div class="success-content">
-                                    <span class="count-text" data-speed="2500" data-stop="100">0</span>
+                                    <span class="count-text" data-speed="2500" data-stop="200">0</span>
                                     <p>Training Programs</p>
                                 </div>
                             </div>
@@ -239,7 +239,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-7 col-md-8">
                         <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
-                            <h2>Here is what we are <span>Offering</span></h2>
+                            <h2>Our Service <span>Offerings</span></h2>
                             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
                         </div>
                     </div>
@@ -387,7 +387,7 @@
                     <div class="col-xl-7 col-md-8">
                         <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
 
-                            <h2>Our <span>Team</span></h2>
+                            <h2> <span>Founder Director</span></h2>
 
                             <!--     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
                         </div>
@@ -411,7 +411,7 @@
                         </div> -->
                         </div>
                         <div class="team-desc">
-                            <h3> <?php echo $row['title']; ?></h3>
+                            <h3 style="text-align: center;"> <?php echo $row['title']; ?></h3>
                             <p class="fs-200 " style="text-align: center;"> <?php echo $row['description']; ?></p>
                         </div>
                     </div>
@@ -595,7 +595,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-md-8">
                         <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
-                            <h2>Our <span>Clients</span></h2>
+                            <h2>Partial List of our  <span>Clientele..</span></h2>
                             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
                         </div>
                     </div>
@@ -603,11 +603,11 @@
             </div>
             <div class="container">
                 <div class="owl-carousel client-logo-carousel">
-                    <div class="item"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" alt="Client 1" class="img-fluid"></div>
-                    <div class="item"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" alt="Client 2" class="img-fluid"></div>
-                    <div class="item"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" alt="Client 3" class="img-fluid"></div>
-                    <div class="item"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" alt="Client 4" class="img-fluid"></div>
-                    <div class="item"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" alt="Client 5" class="img-fluid"></div>
+                <?php $i = 1;
+                        foreach ($clients as $row) : ?>
+                    <div class="item"><img src="<?php echo base_url('' . $row['image']); ?>" alt="Client 1" class="img-fluid"></div>
+                    <?php $i++;
+                        endforeach; ?>
                 </div>
             </div>
         </section>

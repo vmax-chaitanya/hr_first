@@ -30,7 +30,7 @@
                  <div class="header-inner d-lg-flex align-items-center">
 
                      <div class="logo-outer d-flex align-items-center">
-                         <div class="logo"><a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" height="70px" width="140px" alt="" title=""></a></div>
+                         <div class="logo"><a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" height="110px" width="200px" alt="" title=""></a></div>
                      </div>
 
                      <div class="nav-outer clearfix ml-lg-auto mr-lg-auto">
