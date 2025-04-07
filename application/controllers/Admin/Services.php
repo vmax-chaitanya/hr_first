@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class Services extends CI_Controller
 {
@@ -16,7 +16,7 @@ class Services extends CI_Controller
 
     public function index()
     {
-        $type ="1";
+        $type = "1";
         $data['services'] = $this->services_model->get_all_services();
         // $type ="2";
         // $data['other_services'] = $this->services_model->get_all_services($type);
@@ -26,9 +26,9 @@ class Services extends CI_Controller
     public function add()
     {
         $data['categories'] = $this->ServicesCategoriesModel->getActiveServicesCategories();
-       // echo $this->db->last_query(); exit;
-      // print_r( $data['categories']); exit;
-        $this->load->view('admin/services_create',$data);
+        // echo $this->db->last_query(); exit;
+        // print_r( $data['categories']); exit;
+        $this->load->view('admin/services_create', $data);
     }
 
     public function create()
@@ -50,12 +50,12 @@ class Services extends CI_Controller
             $this->load->view('admin/services_create');
         } else {
             if (!empty($_FILES['image']['name'])) {
-               
+
                 $temp = $_FILES['image']['tmp_name'];
                 $name = $_FILES['image']['name'];
                 $fileName = time() . $name;
                 $path = "./assets/images/services/$fileName";
-                $image_name = '/assets/images/services/'.$fileName;
+                $image_name = '/assets/images/services/' . $fileName;
                 $a = move_uploaded_file($temp, $path);
             }
             $icon = '';
@@ -84,7 +84,9 @@ class Services extends CI_Controller
             $data = array(
                 'type' => $this->input->post('type'),
                 'name' => $this->input->post('name'),
-                'service_url' => str_replace(' ', '-', strtolower(trim($this->input->post('name')))),
+                // 'service_url' => str_replace(' ', '-', strtolower(trim($this->input->post('name')))),
+                'service_url' => preg_replace('/[^a-z0-9\-]/', '', str_replace(' ', '-', strtolower(trim($this->input->post('name'))))),
+
                 'description' => $this->input->post('description'),
                 'description_new' => $this->input->post('description_new'),
                 'status' => $this->input->post('status'),
@@ -142,12 +144,12 @@ class Services extends CI_Controller
             $service = $this->services_model->get_service_by_id($id);
 
             if (!empty($_FILES['image']['name'])) {
-               
+
                 $temp = $_FILES['image']['tmp_name'];
                 $name = $_FILES['image']['name'];
                 $fileName = time() . $name;
                 $path = "./assets/images/services/$fileName";
-                $image_name = '/assets/images/services/'.$fileName;
+                $image_name = '/assets/images/services/' . $fileName;
                 $a = move_uploaded_file($temp, $path);
             } else {
                 $image_name = $this->input->post('old_image');
@@ -161,9 +163,8 @@ class Services extends CI_Controller
                 $path = "./assets/images/service_icon/$fileName";
                 $icon = '/assets/images/service_icon/' . $fileName;
                 $a = move_uploaded_file($temp, $path);
-            }else{
+            } else {
                 $icon = $this->input->post('old_icon');
-
             }
 
             // Handle brochure upload
@@ -176,15 +177,16 @@ class Services extends CI_Controller
                 $path = "./assets/images/banner_image/$fileName";
                 $banner_image = '/assets/images/banner_image/' . $fileName;
                 $a = move_uploaded_file($temp, $path);
-            }else{
+            } else {
                 $banner_image = $this->input->post('old_banner_image');
-
             }
 
             $data = array(
                 'name' => $this->input->post('name'),
                 'type' => $this->input->post('type'),
-                'service_url' => str_replace(' ', '-', strtolower(trim($this->input->post('name')))),
+                // 'service_url' => str_replace(' ', '-', strtolower(trim($this->input->post('name')))),
+                'service_url' => preg_replace('/[^a-z0-9\-]/', '', str_replace(' ', '-', strtolower(trim($this->input->post('name'))))),
+
 
                 'description' => $this->input->post('description'),
                 'description_new' => $this->input->post('description_new'),
@@ -192,7 +194,7 @@ class Services extends CI_Controller
                 'status' => $this->input->post('status'),
                 'image' => $image_name,
                 'banner_image' => $banner_image,
-                'banner_text' =>$this->input->post('banner_text'),
+                'banner_text' => $this->input->post('banner_text'),
 
                 'module_name_1' => $this->input->post('module_name_1'),
                 'module_quote_1' => $this->input->post('module_quote_1'),
@@ -204,10 +206,10 @@ class Services extends CI_Controller
                 'meta_name' => $this->input->post('meta_name'),
                 'meta_description' => $this->input->post('meta_description'),
                 'meta_keywords' => $this->input->post('meta_keywords'),
-                
+
                 'icon' => $icon,
                 'created_at' => time(),
-                'created_by' => '2'// Replace this with the actual created_by user ID
+                'created_by' => '2' // Replace this with the actual created_by user ID
             );
 
             $result = $this->services_model->update_service($id, $data);
