@@ -30,7 +30,7 @@
                  <div class="header-inner d-lg-flex align-items-center">
 
                      <div class="logo-outer d-flex align-items-center">
-                         <div class="logo"><a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" height="110px" width="200px" alt="" title=""></a></div>
+                         <div class="logo"><a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/home/images/logo.png" alt="" title=""></a></div>
                      </div>
 
                      <div class="nav-outer clearfix ml-lg-auto mr-lg-auto">
@@ -54,15 +54,15 @@
                                          <ul>
                                              <?php $i = 1;
                                                 foreach ($services as $row) : ?>
-                                                 <li><a href="<?php echo base_url();?>services/<?php echo $row['service_url']; ?>"><?php echo $row['name'];?></a></li>
-                                                
+                                                 <li><a href="<?php echo base_url(); ?>services/<?php echo $row['service_url']; ?>"><?php echo $row['name']; ?></a></li>
+
                                              <?php $i++;
                                                 endforeach; ?>
                                          </ul>
                                      </li>
                                      <li><a href="<?php echo base_url(); ?>careers">Careers</a></li>
                                      <li><a href="<?php echo base_url(); ?>blogs">Blog</a></li>
-                                    
+
                                      <li><a href="<?php echo base_url(); ?>contact">Contact Us</a></li>
                                  </ul>
                              </div>

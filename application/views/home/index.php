@@ -30,7 +30,7 @@
     <div class="page-wrapper">
 
         <!-- Preloader -->
-        <div class="preloader"></div>
+        <!-- <div class="preloader"></div> -->
 
         <!--/////////////////////// header start ////////////////////////-->
         <?php $page = 'make_active';
@@ -97,7 +97,7 @@
                 <?php $i = 1;
                 foreach ($banners as $banner) : ?>
                     <div class="carousel-item <?php echo $i == 1 ? 'active' : ''; ?> ">
-                        <img class="d-block w-100" src="<?php echo base_url('' . $banner['image']); ?>" alt="First slide">
+                        <img loading="lazy" class="d-block w-100" src="<?php echo base_url('' . $banner['image']); ?>" alt="First slide">
                         <div class="carousel-caption">
                             <h1> <?php echo $banner['name']; ?></h1>
                         </div>
@@ -595,7 +595,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-md-8">
                         <div class="section-title text-center mb-80 wow fadeInUp" data-wow-duration="2s">
-                            <h2>Partial List of our  <span>Clientele..</span></h2>
+                            <h2>Partial List of our <span>Clientele..</span></h2>
                             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam</p> -->
                         </div>
                     </div>
@@ -603,11 +603,11 @@
             </div>
             <div class="container">
                 <div class="owl-carousel client-logo-carousel">
-                <?php $i = 1;
-                        foreach ($clients as $row) : ?>
-                    <div class="item"><img src="<?php echo base_url('' . $row['image']); ?>" alt="Client 1" class="img-fluid"></div>
+                    <?php $i = 1;
+                    foreach ($clients as $row) : ?>
+                        <div class="item"><img src="<?php echo base_url('' . $row['image']); ?>" alt="Client 1" class="img-fluid"></div>
                     <?php $i++;
-                        endforeach; ?>
+                    endforeach; ?>
                 </div>
             </div>
         </section>
